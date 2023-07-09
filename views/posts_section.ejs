@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<script>
+  user = {};
+  user.full_name = '<%= user.name %>';
+  user.id = '<%= user.id %>';
+  user.photo = '<%= user.photo %>';
+  console.log(user);
+</script>
+
+sorting by:
+<select id="sort_type" size="2">
+    <option value="1">الاحدث</option>
+    <option value="2">ميكس</option>
+</select>
+<br>
+<br>
+<br>
+<button onclick="get_next_post()">get next best post</button>
+<br>
+<br>
+<br>
+user id to get one of its post:
+<input type="text" id="id0">
+<button onclick="get_post_user(document.getElementById('id0').value)">get a post</button>
+<br>
+<br>
+<br>
+post id to make it as seen:
+<input type="text" id="id1">
+<button onclick="mark_seen(document.getElementById('id1').value)">mark seen</button>
+<br>
+<br>
+<br>
+
+post id to delete:
+<input type="text" id="id2">
+<button onclick="delete_post(document.getElementById('id2').value)">delete post</button>
+<br>
+<br>
+<br>
+
+Create post
+<form method="post" action="http://127.0.0.1:8888/add-post" enctype="multipart/form-data">
+    <label>
+        TEXT:
+        <input name="text" type="text">
+    </label>
+    <br>
+    <label>
+        PHOTO:
+        <input name="photo" type="file" id="photoSelect" accept="image/png, image/jpeg">
+    </label>
+    <br>
+    <input type="submit">
+</form>
+<br>
+<br>
+<br>
+UPDATE post
+<form method="post" action="http://127.0.0.1:8888/update-post" enctype="multipart/form-data">
+    <label>
+        POST ID:
+        <input name="post_id" type="text">
+    </label>
+    <br>
+    <label>
+        TEXT:
+        <input name="text" type="text">
+    </label>
+    <br>
+    <label>
+        PHOTO:
+        <input name="photo" type="file" id="photoSelect" accept="image/png, image/jpeg">
+    </label>
+    <br>
+    <input type="submit">
+</form>
+<br>
+<br>
+<br>
+
+<script>
+
+  function get_post_user(user_id) {
+    const sort_type = document.getElementById('sort_type').value;
+    $.get('http://127.0.0.1:8888/best-post-user/' + sort_type + '/' + user_id, async (data) => {
+      console.log(data);
+    });
+  }
+
+  function get_next_post() {
+    const sort_type = document.getElementById('sort_type').value;
+    $.get('http://127.0.0.1:8888/best-post/' + sort_type, async (data) => {
+      console.log(data);
+    });
+  }
+
+  function mark_seen(post_id) {
+    $.post('http://127.0.0.1:8888/mark-seen/' + post_id, async (data) => {
+      console.log(data);
+    });
+  }
+
+  function delete_post(post_id) {
+    $.ajax({
+      url: 'http://127.0.0.1:8888/post/' + post_id,
+      type: 'DELETE',
+    });
+  }
+
+</script>
+</body>
+</html>

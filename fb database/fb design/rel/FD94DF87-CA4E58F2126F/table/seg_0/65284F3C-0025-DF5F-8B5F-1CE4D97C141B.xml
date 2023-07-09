@@ -1,0 +1,97 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="65284F3C-0025-DF5F-8B5F-1CE4D97C141B" name="seen_post">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:18:08 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<ordsAlias>table_12</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="C2D43EA9-A266-C2F3-9AFD-404ACED6B273">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:28:24 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="counter" id="582BCE35-0584-65A8-9AD1-BE08681B3DFC">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:15:53 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="user_account_id" id="730069FE-21B1-85E6-0882-318E497CD00B">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:58:10 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4FD68540-E49F-7EAE-F93B-8CE8D7D98686" referredColumn="AE03C7BE-BBE3-A45F-2989-ACBDAEABC251"/>
+</associations>
+</Column>
+<Column name="post_id" id="AF28681A-37FE-469F-86CF-894C41228965">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:58:22 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3254CB5D-9752-D91C-8F2C-7BF8FA060552" referredColumn="FCBF6131-5BEB-96F7-3C63-654F591E7EF0"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A378D65B-86A5-37B9-7F4C-187C0E8C4FE5" name="seen_post_PK">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:28:24 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C2D43EA9-A266-C2F3-9AFD-404ACED6B273"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8B72A6D6-DA31-8AC8-7E98-A7E569BA0DBD" name="seen_post_user_account_FK">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:58:10 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="730069FE-21B1-85E6-0882-318E497CD00B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D29B5515-6DDE-64B3-3936-0A68401E7579" name="seen_post_post_FK">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:58:22 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AF28681A-37FE-469F-86CF-894C41228965"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

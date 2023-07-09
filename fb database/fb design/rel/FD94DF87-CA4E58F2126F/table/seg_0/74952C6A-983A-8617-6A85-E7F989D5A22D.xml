@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="74952C6A-983A-8617-6A85-E7F989D5A22D" name="chat">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:20:48 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<ordsAlias>table_14</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="F207CBFE-518E-EE59-E332-5069A1D90C80">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:28:41 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="last_date" id="0986FAD9-B06B-E381-38C8-04B3CF8CF03C">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:20:39 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="number_unread" id="DB0A1B5C-E3BD-D7C5-F651-413B9FE2D1A8">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:20:39 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="user_account_id" id="75978FCB-BFDD-EED9-EED4-124B38DF7554">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:54:43 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C3837BB9-17D0-0EE2-2C56-346318AE8C51" referredColumn="AE03C7BE-BBE3-A45F-2989-ACBDAEABC251"/>
+</associations>
+</Column>
+<Column name="user_account_id1" id="AC4778E5-3B35-0E00-2C4C-7013C1BDF823">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:55:05 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E6449C68-7C09-4237-7903-DDE69F227F0D" referredColumn="AE03C7BE-BBE3-A45F-2989-ACBDAEABC251"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4ACACE98-392A-B168-8606-8FE57E239629" name="chat_PK">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:28:41 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F207CBFE-518E-EE59-E332-5069A1D90C80"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="10181BAE-6299-0D63-6F55-AE020146AA7B" name="chat_user_account_FK">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:54:43 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="75978FCB-BFDD-EED9-EED4-124B38DF7554"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="67190E11-FFCF-096A-9886-56E916D237D5" name="chat_user_account_FKv2">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:55:05 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AC4778E5-3B35-0E00-2C4C-7013C1BDF823"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

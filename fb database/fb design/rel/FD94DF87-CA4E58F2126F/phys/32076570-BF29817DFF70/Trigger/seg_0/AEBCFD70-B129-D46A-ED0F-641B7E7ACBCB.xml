@@ -1,0 +1,27 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="Trg_Insert_Delete_React_Post" directorySegmentName="seg_0" id="AEBCFD70-B129-D46A-ED0F-641B7E7ACBCB">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 03:26:13 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<actions>INSERT, DELETE</actions>
+<body><![CDATA[begin
+
+IF DELETING THEN 
+	update post
+		set reactions = reactions - 1 
+		where 
+			post.id = :old.post_id
+ELSE
+	update post
+		set reactions = reactions + 1 
+		where 
+			post.id = :new.post_id
+END IF ;
+
+end;]]></body>
+<triggerTime>AFTER</triggerTime>
+<ref_NEW_AS>new</ref_NEW_AS>
+<ref_OLD_AS>old</ref_OLD_AS>
+<state>ENABLE</state>
+<table>B62EF4A5-D528-ED5F-8413-C9C809F93C06</table>
+</TriggerOraclev10g>

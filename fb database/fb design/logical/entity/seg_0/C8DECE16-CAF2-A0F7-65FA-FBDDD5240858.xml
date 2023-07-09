@@ -1,0 +1,48 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C8DECE16-CAF2-A0F7-65FA-FBDDD5240858" name="friendship">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:36:37 UTC</createdTime>
+<generatorID>CBF9918C-EC1D-A961-0F5C-726982F3A32F</generatorID>
+<ownerDesignName>fb design</ownerDesignName>
+<engineerTo>
+<item key="FD94DF87-8AC1-ADCD-3F32-CA4E58F2126F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="A2E38944-00BF-7C1A-F204-056EA0D260D2">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:36:37 UTC</createdTime>
+<generatorID>A5713D8E-CED7-1869-B615-A2F9C6EF0F94</generatorID>
+<ownerDesignName>fb design</ownerDesignName>
+<engineerTo>
+<item key="FD94DF87-8AC1-ADCD-3F32-CA4E58F2126F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="3DFE37B8-B0FC-3F51-B407-3A04D824AC7D" name="friendship PK">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:36:37 UTC</createdTime>
+<generatorID>BFBF7EE9-2762-039C-F7A0-782A44CDBEC9</generatorID>
+<ownerDesignName>fb design</ownerDesignName>
+<engineerTo>
+<item key="FD94DF87-8AC1-ADCD-3F32-CA4E58F2126F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A2E38944-00BF-7C1A-F204-056EA0D260D2</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

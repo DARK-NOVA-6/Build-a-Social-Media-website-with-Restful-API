@@ -1,0 +1,1 @@
+ALTER TABLE seen_post ADD CONSTRAINT seen_post_pk PRIMARY KEY ( id );

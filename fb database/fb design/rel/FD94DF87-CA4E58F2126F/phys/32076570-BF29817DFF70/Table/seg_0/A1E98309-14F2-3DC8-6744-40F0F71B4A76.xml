@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="request_friendship" directorySegmentName="seg_0" id="A1E98309-14F2-3DC8-6744-40F0F71B4A76">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:39:04 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="send_date" id="819D7FDB-6B8B-27D3-2118-F95B178E03C5">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:15:07 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<defaultValue>sysdate</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="user_account_id" id="BC8F3244-44D4-B2B4-D22E-58CC49BA6F34">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:53:15 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id" id="C39D2A54-C270-3711-D288-DBE3FDE7D96A">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:39:04 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="user_account_id1" id="D7DAC463-C263-ACAA-9555-4305794E4F88">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:53:23 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="reqfriend_useracc_FK" id="0379A48C-2D27-63DC-44BE-93FD12233825">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:53:15 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<nameChanged>true</nameChanged>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="reqfriend_useracc_FKv2" id="1FB449BF-7D9A-E804-E86D-872D409CFFAE">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:53:23 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<nameChanged>true</nameChanged>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="request_friendship_PK" id="B12BF033-B097-2926-2F06-BA216040B373">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:39:04 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.storage.oracle.TableCheckConstraintOracle">
+<TableCheckConstraint name="request_friendship_CK_1" id="7136B7C2-88F3-B560-444A-61427C01D6F6">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:54:03 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+</TableCheckConstraint>
+</tableCheckConstraints>
+</TableProxyOraclev11g>

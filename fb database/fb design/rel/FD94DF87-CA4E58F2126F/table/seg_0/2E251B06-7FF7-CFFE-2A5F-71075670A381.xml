@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2E251B06-7FF7-CFFE-2A5F-71075670A381" name="notification">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:14:04 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="41E5D179-AEDE-D8DB-FF16-71E5B7CFBBDD">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:27:57 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="text" id="0ACC3826-9C2A-A359-1E6C-AAE74E210530">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:00:32 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="event_url" id="E4EA7D12-A130-39EA-AC59-291FACB1B970">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:00:32 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="event_date" id="4180816D-E4A3-9073-336A-246A169C73F3">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:25:32 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<defaultValue>sysdate</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="seen" id="A7BA3B59-065E-90E0-8071-F8B4DE2BEA27">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:25:32 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="user_account_id" id="8989AC42-B148-318B-7426-B3C014C54B59">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 02:27:49 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3A04353D-61A1-CBE8-2AE2-A378E2FF3747" referredColumn="AE03C7BE-BBE3-A45F-2989-ACBDAEABC251"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C3332737-9731-A022-108F-DCC0DD47199C" name="notification_PK">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:27:57 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="41E5D179-AEDE-D8DB-FF16-71E5B7CFBBDD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FAF48CB7-6E69-AA02-D04B-AF848E2E106C" name="notification_user_account_FK">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 02:27:49 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8989AC42-B148-318B-7426-B3C014C54B59"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

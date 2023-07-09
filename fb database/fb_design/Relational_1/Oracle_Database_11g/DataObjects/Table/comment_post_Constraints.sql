@@ -1,0 +1,1 @@
+ALTER TABLE comment_post ADD CONSTRAINT comment_pk PRIMARY KEY ( id );

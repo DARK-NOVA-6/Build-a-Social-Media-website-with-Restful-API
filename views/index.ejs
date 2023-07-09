@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+sign-up::
+<form method="post" action="http://127.0.0.1:8888/sign-up">
+
+    <label>
+        username:
+        <input type="text" name="username" value="admin3">
+    </label>
+    <br>
+    <label>
+        email:
+        <input type="text" name="email" value="admin3@gmail.com">
+    </label>
+    <br>
+    <label>
+        pass:
+        <input type="text" name="password" value="Pass123!@#">
+    </label>
+    <br>
+    <label>
+        conf pass:
+        <input type="text" name="conf_password" value="Pass123!@#">
+    </label>
+    <br>
+    <label>
+        first name:
+        <input type="text" name="first_name" value="firstName">
+    </label>
+    <br>
+    <label>
+        last name:
+        <input type="text" name="last_name" value="lastName">
+    </label>
+    <br>
+    <input type="submit">
+</form>
+
+<br>
+<br>
+<br>
+login::
+<form method="post" action="http://127.0.0.1:8888/login">
+    <label>
+        username:
+        <input type="text" name="username" value="admin3">
+    </label>
+    <br>
+    <label>
+        pass:
+        <input type="text" name="password" value="Pass123!@#">
+    </label>
+    <br>
+    <input type="submit">
+</form>
+<br>
+<br>
+<br>
+<br>
+<button onclick="document.location = 'http://127.0.0.1:8888/logout'">logout</button>
+
+</body>
+</html>

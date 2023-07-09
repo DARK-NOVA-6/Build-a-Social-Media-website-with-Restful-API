@@ -1,0 +1,1 @@
+ALTER TABLE react_post ADD CONSTRAINT react_post_pk PRIMARY KEY ( id );

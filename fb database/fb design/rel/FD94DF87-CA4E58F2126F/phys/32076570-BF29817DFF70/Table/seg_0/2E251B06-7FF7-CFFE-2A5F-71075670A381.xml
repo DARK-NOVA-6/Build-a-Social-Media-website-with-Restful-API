@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="notification" directorySegmentName="seg_0" id="2E251B06-7FF7-CFFE-2A5F-71075670A381">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:39:04 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="text" id="0ACC3826-9C2A-A359-1E6C-AAE74E210530">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:00:32 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="event_date" id="4180816D-E4A3-9073-336A-246A169C73F3">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:25:32 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<defaultValue>sysdate</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="id" id="41E5D179-AEDE-D8DB-FF16-71E5B7CFBBDD">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:39:04 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="user_account_id" id="8989AC42-B148-318B-7426-B3C014C54B59">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 02:27:49 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="seen" id="A7BA3B59-065E-90E0-8071-F8B4DE2BEA27">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:25:32 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<defaultValue>false</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="event_url" id="E4EA7D12-A130-39EA-AC59-291FACB1B970">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:00:32 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="notification_user_account_FK" id="FAF48CB7-6E69-AA02-D04B-AF848E2E106C">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 02:27:49 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="notification_PK" id="C3332737-9731-A022-108F-DCC0DD47199C">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:39:04 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

@@ -1,0 +1,1 @@
+ALTER TABLE joined_event ADD CONSTRAINT joined_event_pk PRIMARY KEY ( id );

@@ -1,0 +1,1 @@
+ALTER TABLE react_comment ADD CONSTRAINT react_comment_pk PRIMARY KEY ( id );

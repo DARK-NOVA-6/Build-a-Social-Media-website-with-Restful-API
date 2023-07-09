@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B908F5A9-E393-1B12-0B15-862A4615A9AF" name="event">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:16:07 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<ordsAlias>table_7</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="C9A190CF-9439-0D7C-E10E-BADA6699570D">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:28:06 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="text" id="CF0DC1BC-05C4-891A-F5F9-4C3A528C28F6">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:03:24 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2500</dataTypeSize>
+<ownDataTypeParameters>2500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="announcement_date" id="85F92E39-6724-DA67-1BE0-15D3727EEC8F">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:03:24 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<defaultValue>sysdate</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="event_date" id="A466522E-F013-DADA-5FB2-4D4D1C39C728">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:03:24 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="interested" id="0E4AA23A-4AF9-5104-4249-00CB679E4BB4">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:45:14 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="user_account_id" id="C921D43E-2000-896D-861A-8E63E162CD99">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 02:11:14 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FF9B06FA-3F84-CDD9-F51C-0206DE1CF129" referredColumn="AE03C7BE-BBE3-A45F-2989-ACBDAEABC251"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F78772F3-263C-C03C-2047-95D74012B8A3" name="event_PK">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:28:06 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C9A190CF-9439-0D7C-E10E-BADA6699570D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="75685213-2C08-F362-42FE-AB247CD1763B" name="event_user_account_FK">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 02:11:14 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C921D43E-2000-896D-861A-8E63E162CD99"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="event_CK_1" directorySegmentName="seg_0" id="64C5B061-8DE8-BDF3-6A62-D0DB4FC2B934">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:03:24 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<rule><![CDATA[announcement_date <= event_date]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

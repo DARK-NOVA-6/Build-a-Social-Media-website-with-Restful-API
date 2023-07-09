@@ -1,0 +1,2048 @@
+--------------------------------------------------------
+--  File created - Monday-July-18-2022   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Sequence CHAT_ID_SEQ
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "FB"."CHAT_ID_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 7 NOCACHE  ORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence CHAT_LINE_ID_SEQ
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "FB"."CHAT_LINE_ID_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 29 NOCACHE  ORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence COMMENTS_ID_SEQ
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "FB"."COMMENTS_ID_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 37 NOCACHE  ORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence COMMENT_ID_SEQ
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "FB"."COMMENT_ID_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 NOCACHE  ORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence COMMENT_POST_ID_SEQ
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "FB"."COMMENT_POST_ID_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 5 NOCACHE  ORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence EVENT_ID_SEQ
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "FB"."EVENT_ID_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 25 NOCACHE  ORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence FRIENDSHIP_ID_SEQ
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "FB"."FRIENDSHIP_ID_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 10 NOCACHE  ORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence JOINED_EVENT_ID_SEQ
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "FB"."JOINED_EVENT_ID_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 25 NOCACHE  ORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence MESSAGE_BOX_ID_SEQ
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "FB"."MESSAGE_BOX_ID_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 NOCACHE  ORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence NOTIFICATION_ID_SEQ
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "FB"."NOTIFICATION_ID_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 NOCACHE  ORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence POST_ID_SEQ
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "FB"."POST_ID_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 29 NOCACHE  ORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence REACTIONS_TYPE_ID_SEQ
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "FB"."REACTIONS_TYPE_ID_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 4 NOCACHE  ORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence REACTION_ID_SEQ
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "FB"."REACTION_ID_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 53 NOCACHE  ORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence REACT_COMMENT_ID_SEQ
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "FB"."REACT_COMMENT_ID_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 NOCACHE  ORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence REACT_POST_ID_SEQ
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "FB"."REACT_POST_ID_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 20 NOCACHE  ORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence REQUEST_FRIENDSHIP_ID_SEQ
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "FB"."REQUEST_FRIENDSHIP_ID_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 34 NOCACHE  ORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence SEEN_POST_ID_SEQ
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "FB"."SEEN_POST_ID_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 12 NOCACHE  ORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence USER_ACCOUNT_ID_SEQ
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "FB"."USER_ACCOUNT_ID_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 57 NOCACHE  ORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence USER_ID_SEQ
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "FB"."USER_ID_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 NOCACHE  ORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Table CHAT
+--------------------------------------------------------
+
+  CREATE TABLE "FB"."CHAT" 
+   (	"ID" NUMBER(*,0), 
+	"USER_ACCOUNT_ID" NUMBER(*,0), 
+	"USER_ACCOUNT_ID1" NUMBER(*,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table CHAT_LINE
+--------------------------------------------------------
+
+  CREATE TABLE "FB"."CHAT_LINE" 
+   (	"ID" NUMBER(*,0), 
+	"MESSAGE" VARCHAR2(500 BYTE), 
+	"SEND_DATE" DATE DEFAULT sysdate, 
+	"RECEIVED_DATE" DATE, 
+	"READ_TIME" DATE, 
+	"SEND_FROM" NUMBER(*,0), 
+	"CHAT_ID" NUMBER(*,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table COMMENTS
+--------------------------------------------------------
+
+  CREATE TABLE "FB"."COMMENTS" 
+   (	"ID" NUMBER(*,0), 
+	"TEXT" VARCHAR2(500 BYTE), 
+	"COMMENT_DATE" DATE DEFAULT sysdate, 
+	"COUNTER_COMMENTS" NUMBER(*,0) DEFAULT 0, 
+	"POST_ID" NUMBER(*,0), 
+	"COMMENTS_ID" NUMBER(*,0), 
+	"USER_ACCOUNT_ID" NUMBER(*,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table EVENT
+--------------------------------------------------------
+
+  CREATE TABLE "FB"."EVENT" 
+   (	"ID" NUMBER(*,0), 
+	"TEXT" VARCHAR2(2500 BYTE), 
+	"ANNOUNCEMENT_DATE" DATE DEFAULT sysdate, 
+	"EVENT_DATE" DATE, 
+	"INTERESTED" NUMBER(*,0) DEFAULT 0, 
+	"USER_ACCOUNT_ID" NUMBER(*,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table FRIENDSHIP
+--------------------------------------------------------
+
+  CREATE TABLE "FB"."FRIENDSHIP" 
+   (	"ID" NUMBER(*,0), 
+	"FRIENDSHIP_DATE" DATE DEFAULT sysdate, 
+	"USER_ACCOUNT_ID" NUMBER(*,0), 
+	"USER_ACCOUNT_ID1" NUMBER(*,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table JOINED_EVENT
+--------------------------------------------------------
+
+  CREATE TABLE "FB"."JOINED_EVENT" 
+   (	"ID" NUMBER(*,0), 
+	"EVENT_ID" NUMBER(*,0), 
+	"USER_ACCOUNT_ID" NUMBER(*,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table NOTIFICATION
+--------------------------------------------------------
+
+  CREATE TABLE "FB"."NOTIFICATION" 
+   (	"ID" NUMBER(*,0), 
+	"TEXT" VARCHAR2(200 BYTE), 
+	"EVENT_URL" VARCHAR2(200 BYTE), 
+	"EVENT_DATE" DATE DEFAULT sysdate, 
+	"SEEN" CHAR(1 BYTE) DEFAULT '0', 
+	"USER_ACCOUNT_ID" NUMBER(*,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table POST
+--------------------------------------------------------
+
+  CREATE TABLE "FB"."POST" 
+   (	"ID" NUMBER(*,0), 
+	"TEXT" VARCHAR2(2500 BYTE), 
+	"PHOTO_URL" VARCHAR2(250 BYTE), 
+	"POSTING_DATE" DATE DEFAULT sysdate, 
+	"REACTIONS" NUMBER(*,0) DEFAULT 0, 
+	"COMMENTS" NUMBER(*,0) DEFAULT 0, 
+	"USER_ACCOUNT_ID" NUMBER(*,0), 
+	"LAST_UPDATE" DATE
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table REACTIONS
+--------------------------------------------------------
+
+  CREATE TABLE "FB"."REACTIONS" 
+   (	"ID" NUMBER(*,0), 
+	"POST_ID" NUMBER(*,0), 
+	"REACTIONS_TYPE_ID" NUMBER(*,0), 
+	"USER_ACCOUNT_ID" NUMBER(*,0), 
+	"COMMENTS_ID" NUMBER(*,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table REACTIONS_TYPE
+--------------------------------------------------------
+
+  CREATE TABLE "FB"."REACTIONS_TYPE" 
+   (	"ID" NUMBER(*,0), 
+	"TITLE" VARCHAR2(50 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table REQUEST_FRIENDSHIP
+--------------------------------------------------------
+
+  CREATE TABLE "FB"."REQUEST_FRIENDSHIP" 
+   (	"ID" NUMBER(*,0), 
+	"SEND_DATE" DATE DEFAULT sysdate, 
+	"USER_ACCOUNT_ID" NUMBER(*,0), 
+	"USER_ACCOUNT_ID1" NUMBER(*,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table SEEN_POST
+--------------------------------------------------------
+
+  CREATE TABLE "FB"."SEEN_POST" 
+   (	"ID" NUMBER(*,0), 
+	"COUNTER" NUMBER(*,0) DEFAULT 0, 
+	"USER_ACCOUNT_ID" NUMBER(*,0), 
+	"POST_ID" NUMBER(*,0), 
+	"LAST_SEEN" DATE
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table USER_ACCOUNT
+--------------------------------------------------------
+
+  CREATE TABLE "FB"."USER_ACCOUNT" 
+   (	"ID" NUMBER(*,0), 
+	"USERNAME" VARCHAR2(100 BYTE), 
+	"EMAIL" VARCHAR2(250 BYTE), 
+	"PASSWORD" VARCHAR2(250 BYTE), 
+	"FIRST_NAME" VARCHAR2(65 BYTE), 
+	"LAST_NAME" VARCHAR2(65 BYTE), 
+	"PHOTO_URL" VARCHAR2(250 BYTE), 
+	"BIRTHDATE" DATE, 
+	"JWT_REFRESH" VARCHAR2(500 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index CHAT_LINE_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."CHAT_LINE_PK" ON "FB"."CHAT_LINE" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index CHAT_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."CHAT_PK" ON "FB"."CHAT" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index COMMENTS_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."COMMENTS_PK" ON "FB"."COMMENTS" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index EVENT_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."EVENT_PK" ON "FB"."EVENT" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index FRIENDSHIP_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."FRIENDSHIP_PK" ON "FB"."FRIENDSHIP" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index JOINED_EVENT_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."JOINED_EVENT_PK" ON "FB"."JOINED_EVENT" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index JOINED_UNIQUE
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."JOINED_UNIQUE" ON "FB"."JOINED_EVENT" ("EVENT_ID", "USER_ACCOUNT_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index NOTIFICATION_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."NOTIFICATION_PK" ON "FB"."NOTIFICATION" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index POST_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."POST_PK" ON "FB"."POST" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index REACTIONS_TYPE_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."REACTIONS_TYPE_PK" ON "FB"."REACTIONS_TYPE" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index REACTIONS_TYPE__UN
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."REACTIONS_TYPE__UN" ON "FB"."REACTIONS_TYPE" ("TITLE") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index REACT_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."REACT_PK" ON "FB"."REACTIONS" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index REQUEST_FRIENDSHIP_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."REQUEST_FRIENDSHIP_PK" ON "FB"."REQUEST_FRIENDSHIP" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index REQUEST_FRIENDSHIP_UNIQUE
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."REQUEST_FRIENDSHIP_UNIQUE" ON "FB"."REQUEST_FRIENDSHIP" ("USER_ACCOUNT_ID", "USER_ACCOUNT_ID1") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index SEEN_POST_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."SEEN_POST_PK" ON "FB"."SEEN_POST" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index USER_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."USER_PK" ON "FB"."USER_ACCOUNT" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index USER__UN
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."USER__UN" ON "FB"."USER_ACCOUNT" ("EMAIL") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index CHAT_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."CHAT_PK" ON "FB"."CHAT" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index CHAT_LINE_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."CHAT_LINE_PK" ON "FB"."CHAT_LINE" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index COMMENTS_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."COMMENTS_PK" ON "FB"."COMMENTS" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index EVENT_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."EVENT_PK" ON "FB"."EVENT" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index FRIENDSHIP_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."FRIENDSHIP_PK" ON "FB"."FRIENDSHIP" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index JOINED_UNIQUE
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."JOINED_UNIQUE" ON "FB"."JOINED_EVENT" ("EVENT_ID", "USER_ACCOUNT_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index JOINED_EVENT_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."JOINED_EVENT_PK" ON "FB"."JOINED_EVENT" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index NOTIFICATION_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."NOTIFICATION_PK" ON "FB"."NOTIFICATION" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index POST_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."POST_PK" ON "FB"."POST" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index REACT_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."REACT_PK" ON "FB"."REACTIONS" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index REACTIONS_TYPE_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."REACTIONS_TYPE_PK" ON "FB"."REACTIONS_TYPE" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index REACTIONS_TYPE__UN
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."REACTIONS_TYPE__UN" ON "FB"."REACTIONS_TYPE" ("TITLE") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index REQUEST_FRIENDSHIP_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."REQUEST_FRIENDSHIP_PK" ON "FB"."REQUEST_FRIENDSHIP" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index REQUEST_FRIENDSHIP_UNIQUE
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."REQUEST_FRIENDSHIP_UNIQUE" ON "FB"."REQUEST_FRIENDSHIP" ("USER_ACCOUNT_ID", "USER_ACCOUNT_ID1") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index SEEN_POST_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."SEEN_POST_PK" ON "FB"."SEEN_POST" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index USER_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."USER_PK" ON "FB"."USER_ACCOUNT" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index USER__UN
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "FB"."USER__UN" ON "FB"."USER_ACCOUNT" ("EMAIL") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Trigger CHAT_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."CHAT_ID_TRG" BEFORE
+    INSERT ON chat
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := chat_id_seq.nextval;
+END;
+
+/
+ALTER TRIGGER "FB"."CHAT_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger CHAT_LINE_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."CHAT_LINE_ID_TRG" BEFORE
+    INSERT ON chat_line
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := chat_line_id_seq.nextval;
+END;
+
+/
+ALTER TRIGGER "FB"."CHAT_LINE_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger COMMENTS_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."COMMENTS_ID_TRG" BEFORE
+    INSERT ON comments
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := comments_id_seq .nextval;
+END;
+/
+ALTER TRIGGER "FB"."COMMENTS_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger EVENT_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."EVENT_ID_TRG" BEFORE
+    INSERT ON event
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := event_id_seq.nextval;
+END;
+
+/
+ALTER TRIGGER "FB"."EVENT_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger FRIENDSHIP_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."FRIENDSHIP_ID_TRG" BEFORE
+    INSERT ON friendship
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := friendship_id_seq.nextval;
+END;
+
+/
+ALTER TRIGGER "FB"."FRIENDSHIP_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger JOINED_EVENT_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."JOINED_EVENT_ID_TRG" BEFORE
+    INSERT ON joined_event
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := joined_event_id_seq.nextval;
+END;
+
+/
+ALTER TRIGGER "FB"."JOINED_EVENT_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger JOINED_EVENT_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."JOINED_EVENT_TRG" AFTER
+    INSERT ON joined_event
+    FOR EACH ROW
+BEGIN
+    UPDATE event
+    SET
+        interested = interested+ 1
+    WHERE
+        :new.event_id = id;
+END;
+/
+ALTER TRIGGER "FB"."JOINED_EVENT_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger JOINED_EVENT_TRG2
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."JOINED_EVENT_TRG2" AFTER
+    DELETE ON joined_event
+    FOR EACH ROW
+BEGIN
+    UPDATE event
+    SET
+        interested = interested - 1
+    WHERE
+        :old.event_id = id;
+
+EXCEPTION
+    WHEN OTHERS THEN
+        BEGIN
+            dbms_output.put_line(sqlcode);
+        END;
+END;
+/
+ALTER TRIGGER "FB"."JOINED_EVENT_TRG2" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger NOTIFICATION_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."NOTIFICATION_ID_TRG" BEFORE
+    INSERT ON notification
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := notification_id_seq.nextval;
+END;
+
+/
+ALTER TRIGGER "FB"."NOTIFICATION_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger POST_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."POST_ID_TRG" BEFORE
+    INSERT ON post
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := post_id_seq.nextval;
+END;
+
+/
+ALTER TRIGGER "FB"."POST_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger POST_UPDATE_TIME_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."POST_UPDATE_TIME_TRG" before
+    INSERT or update ON post
+    FOR EACH ROW
+BEGIN
+    :new.last_update := sysdate();
+END;
+
+/
+ALTER TRIGGER "FB"."POST_UPDATE_TIME_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger REACTIONS_TYPE_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."REACTIONS_TYPE_ID_TRG" BEFORE
+    INSERT ON reactions_type
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := reactions_type_id_seq.nextval;
+END;
+
+/
+ALTER TRIGGER "FB"."REACTIONS_TYPE_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger REACTION_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."REACTION_TRG" AFTER
+    INSERT ON reactions
+    FOR EACH ROW
+BEGIN
+    IF ( :new.post_id IS NOT NULL ) THEN
+        UPDATE post
+        SET
+            reactions = reactions + 1
+        WHERE
+            :new.post_id = id;
+
+    END IF;
+END;
+/
+ALTER TRIGGER "FB"."REACTION_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger REACTION_TRG1
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."REACTION_TRG1" BEFORE
+    DELETE ON reactions
+    FOR EACH ROW
+BEGIN
+    IF ( :old.post_id IS NOT NULL ) THEN
+        UPDATE post
+        SET
+            reactions = reactions - 1
+        WHERE
+            :old.post_id = id;
+
+    END IF;
+END;
+/
+ALTER TRIGGER "FB"."REACTION_TRG1" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger REATION_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."REATION_ID_TRG" BEFORE
+    INSERT ON REACTIONS
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := reaction_id_seq.nextval;
+END;
+/
+ALTER TRIGGER "FB"."REATION_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger REQUEST_FRIENDSHIP_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."REQUEST_FRIENDSHIP_ID_TRG" BEFORE
+    INSERT ON request_friendship
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := request_friendship_id_seq.nextval;
+END;
+
+/
+ALTER TRIGGER "FB"."REQUEST_FRIENDSHIP_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger REQUEST_FRIENDSHIP_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."REQUEST_FRIENDSHIP_TRG" BEFORE
+    INSERT ON request_friendship
+    FOR EACH ROW
+DECLARE
+    v_counter INTEGER;
+BEGIN
+    SELECT
+        COUNT(*)
+    INTO v_counter
+    FROM
+        request_friendship
+    WHERE
+            :new.user_account_id = user_account_id1
+        AND :new.user_account_id1 = user_account_id;
+
+    IF ( v_counter > 0 ) THEN
+        raise_application_error(-20200, 'A friend request has been sent from both users');
+    END IF;
+    SELECT
+        COUNT(*)
+    INTO v_counter
+    FROM
+        friendship
+    WHERE
+        ( :new.user_account_id = user_account_id1
+          AND :new.user_account_id1 = user_account_id )
+        OR ( :new.user_account_id = user_account_id
+             AND :new.user_account_id1 = user_account_id1 );
+
+    IF ( v_counter > 0 ) THEN
+        raise_application_error(-20201, 'both users friends already');
+    END IF;
+END;
+/
+ALTER TRIGGER "FB"."REQUEST_FRIENDSHIP_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger SEEN_POST_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."SEEN_POST_ID_TRG" BEFORE
+    INSERT ON seen_post
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := seen_post_id_seq.nextval;
+END;
+
+/
+ALTER TRIGGER "FB"."SEEN_POST_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger SEEN_POST_TIME_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."SEEN_POST_TIME_TRG" before
+    INSERT or update ON seen_post
+    FOR EACH ROW
+BEGIN
+    :new.last_seen := sysdate();
+END;
+
+/
+ALTER TRIGGER "FB"."SEEN_POST_TIME_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger USER_ACCOUNT_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."USER_ACCOUNT_ID_TRG" BEFORE
+    INSERT ON user_account
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := user_account_id_seq.nextval;
+END;
+
+/
+ALTER TRIGGER "FB"."USER_ACCOUNT_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger CHAT_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."CHAT_ID_TRG" BEFORE
+    INSERT ON chat
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := chat_id_seq.nextval;
+END;
+
+/
+ALTER TRIGGER "FB"."CHAT_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger CHAT_LINE_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."CHAT_LINE_ID_TRG" BEFORE
+    INSERT ON chat_line
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := chat_line_id_seq.nextval;
+END;
+
+/
+ALTER TRIGGER "FB"."CHAT_LINE_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger COMMENTS_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."COMMENTS_ID_TRG" BEFORE
+    INSERT ON comments
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := comments_id_seq .nextval;
+END;
+/
+ALTER TRIGGER "FB"."COMMENTS_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger EVENT_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."EVENT_ID_TRG" BEFORE
+    INSERT ON event
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := event_id_seq.nextval;
+END;
+
+/
+ALTER TRIGGER "FB"."EVENT_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger FRIENDSHIP_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."FRIENDSHIP_ID_TRG" BEFORE
+    INSERT ON friendship
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := friendship_id_seq.nextval;
+END;
+
+/
+ALTER TRIGGER "FB"."FRIENDSHIP_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger JOINED_EVENT_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."JOINED_EVENT_ID_TRG" BEFORE
+    INSERT ON joined_event
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := joined_event_id_seq.nextval;
+END;
+
+/
+ALTER TRIGGER "FB"."JOINED_EVENT_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger JOINED_EVENT_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."JOINED_EVENT_TRG" AFTER
+    INSERT ON joined_event
+    FOR EACH ROW
+BEGIN
+    UPDATE event
+    SET
+        interested = interested+ 1
+    WHERE
+        :new.event_id = id;
+END;
+/
+ALTER TRIGGER "FB"."JOINED_EVENT_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger JOINED_EVENT_TRG2
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."JOINED_EVENT_TRG2" AFTER
+    DELETE ON joined_event
+    FOR EACH ROW
+BEGIN
+    UPDATE event
+    SET
+        interested = interested - 1
+    WHERE
+        :old.event_id = id;
+
+EXCEPTION
+    WHEN OTHERS THEN
+        BEGIN
+            dbms_output.put_line(sqlcode);
+        END;
+END;
+/
+ALTER TRIGGER "FB"."JOINED_EVENT_TRG2" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger NOTIFICATION_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."NOTIFICATION_ID_TRG" BEFORE
+    INSERT ON notification
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := notification_id_seq.nextval;
+END;
+
+/
+ALTER TRIGGER "FB"."NOTIFICATION_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger POST_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."POST_ID_TRG" BEFORE
+    INSERT ON post
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := post_id_seq.nextval;
+END;
+
+/
+ALTER TRIGGER "FB"."POST_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger POST_UPDATE_TIME_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."POST_UPDATE_TIME_TRG" before
+    INSERT or update ON post
+    FOR EACH ROW
+BEGIN
+    :new.last_update := sysdate();
+END;
+
+/
+ALTER TRIGGER "FB"."POST_UPDATE_TIME_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger REACTION_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."REACTION_TRG" AFTER
+    INSERT ON reactions
+    FOR EACH ROW
+BEGIN
+    IF ( :new.post_id IS NOT NULL ) THEN
+        UPDATE post
+        SET
+            reactions = reactions + 1
+        WHERE
+            :new.post_id = id;
+
+    END IF;
+END;
+/
+ALTER TRIGGER "FB"."REACTION_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger REACTION_TRG1
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."REACTION_TRG1" BEFORE
+    DELETE ON reactions
+    FOR EACH ROW
+BEGIN
+    IF ( :old.post_id IS NOT NULL ) THEN
+        UPDATE post
+        SET
+            reactions = reactions - 1
+        WHERE
+            :old.post_id = id;
+
+    END IF;
+END;
+/
+ALTER TRIGGER "FB"."REACTION_TRG1" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger REATION_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."REATION_ID_TRG" BEFORE
+    INSERT ON REACTIONS
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := reaction_id_seq.nextval;
+END;
+/
+ALTER TRIGGER "FB"."REATION_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger REACTIONS_TYPE_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."REACTIONS_TYPE_ID_TRG" BEFORE
+    INSERT ON reactions_type
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := reactions_type_id_seq.nextval;
+END;
+
+/
+ALTER TRIGGER "FB"."REACTIONS_TYPE_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger REQUEST_FRIENDSHIP_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."REQUEST_FRIENDSHIP_ID_TRG" BEFORE
+    INSERT ON request_friendship
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := request_friendship_id_seq.nextval;
+END;
+
+/
+ALTER TRIGGER "FB"."REQUEST_FRIENDSHIP_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger REQUEST_FRIENDSHIP_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."REQUEST_FRIENDSHIP_TRG" BEFORE
+    INSERT ON request_friendship
+    FOR EACH ROW
+DECLARE
+    v_counter INTEGER;
+BEGIN
+    SELECT
+        COUNT(*)
+    INTO v_counter
+    FROM
+        request_friendship
+    WHERE
+            :new.user_account_id = user_account_id1
+        AND :new.user_account_id1 = user_account_id;
+
+    IF ( v_counter > 0 ) THEN
+        raise_application_error(-20200, 'A friend request has been sent from both users');
+    END IF;
+    SELECT
+        COUNT(*)
+    INTO v_counter
+    FROM
+        friendship
+    WHERE
+        ( :new.user_account_id = user_account_id1
+          AND :new.user_account_id1 = user_account_id )
+        OR ( :new.user_account_id = user_account_id
+             AND :new.user_account_id1 = user_account_id1 );
+
+    IF ( v_counter > 0 ) THEN
+        raise_application_error(-20201, 'both users friends already');
+    END IF;
+END;
+/
+ALTER TRIGGER "FB"."REQUEST_FRIENDSHIP_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger SEEN_POST_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."SEEN_POST_ID_TRG" BEFORE
+    INSERT ON seen_post
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := seen_post_id_seq.nextval;
+END;
+
+/
+ALTER TRIGGER "FB"."SEEN_POST_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger SEEN_POST_TIME_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."SEEN_POST_TIME_TRG" before
+    INSERT or update ON seen_post
+    FOR EACH ROW
+BEGIN
+    :new.last_seen := sysdate();
+END;
+
+/
+ALTER TRIGGER "FB"."SEEN_POST_TIME_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger USER_ACCOUNT_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "FB"."USER_ACCOUNT_ID_TRG" BEFORE
+    INSERT ON user_account
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := user_account_id_seq.nextval;
+END;
+
+/
+ALTER TRIGGER "FB"."USER_ACCOUNT_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Procedure DELETE_COMMENT
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE PROCEDURE "FB"."DELETE_COMMENT" (
+    p_comment_id  INTEGER,
+    p_user_id     INTEGER
+) IS
+    v_counter INTEGER;
+BEGIN
+    SELECT
+        counter_comments
+    INTO v_counter
+    FROM
+        comments
+    WHERE
+            id = p_comment_id
+        AND user_account_id = p_user_id;
+
+    increase_comments_counter(p_comment_id, -v_counter - 1);
+    DELETE FROM comments
+    WHERE
+            id = p_comment_id
+        AND user_account_id = p_user_id;
+
+END;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure INCREASE_COMMENTS_COUNTER
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE PROCEDURE "FB"."INCREASE_COMMENTS_COUNTER" (
+    p_comments_id  INTEGER,
+    p_delta        INTEGER
+) IS
+    v_comments_parent_id  INTEGER;
+    v_post_parent_id      INTEGER;
+BEGIN
+    SELECT
+        comments_id,
+        post_id
+    INTO
+        v_comments_parent_id,
+        v_post_parent_id
+    FROM
+        comments
+    WHERE
+        id = p_comments_id;
+
+    IF ( v_comments_parent_id IS NOT NULL ) THEN
+        UPDATE comments
+        SET
+            counter_comments = counter_comments + p_delta
+        WHERE
+            v_comments_parent_id = id;
+
+        increase_comments_counter(v_comments_parent_id, p_delta);
+    END IF;
+
+    IF ( v_post_parent_id IS NOT NULL ) THEN
+        UPDATE post
+        SET
+            comments = comments + p_delta
+        WHERE
+            v_post_parent_id = id;
+
+    END IF;
+
+END;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure INSERT_COMMENT
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE PROCEDURE "FB"."INSERT_COMMENT" (
+    p_comments_id  INTEGER,
+    p_post_id      INTEGER,
+    p_text         VARCHAR2,
+    p_user_id      INTEGER
+) IS
+    v_inserted_row INTEGER;
+BEGIN
+    INSERT INTO comments (
+        post_id,
+        comments_id,
+        text,
+        user_account_id
+    ) VALUES (
+        p_post_id,
+        p_comments_id,
+        p_text,
+        p_user_id
+    );
+
+    SELECT
+        MAX(id)
+    INTO v_inserted_row
+    FROM
+        comments;
+
+    increase_comments_counter(v_inserted_row, 1);
+END;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure MARK_SEEN
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE PROCEDURE "FB"."MARK_SEEN" (
+    p_post_id  IN  INTEGER,
+    p_user_id  IN  INTEGER
+) IS
+    v_count_seen INTEGER;
+BEGIN
+    v_count_seen := count_seen_times(p_post_id, p_user_id);
+    IF ( v_count_seen = 0 ) THEN
+        INSERT INTO seen_post (
+            counter,
+            user_account_id,
+            post_id
+        ) VALUES (
+            1,
+            p_user_id,
+            p_post_id
+        );
+
+    ELSE
+        UPDATE seen_post
+        SET
+            counter = counter + 1
+        WHERE
+                post_id = p_post_id
+            AND user_account_id = p_user_id;
+
+    END IF;
+
+END;
+
+/
+--------------------------------------------------------
+--  DDL for Function COUNT_COMMON_FRIENDS
+--------------------------------------------------------
+
+  CREATE OR REPLACE FUNCTION "FB"."COUNT_COMMON_FRIENDS" (
+    p_user_id1  INTEGER,
+    p_user_id2  INTEGER
+) RETURN INTEGER IS
+    v_counter INTEGER;
+BEGIN
+    SELECT
+        COUNT(*)
+    INTO v_counter
+    FROM
+        friendship
+    WHERE
+        ( user_account_id = p_user_id1
+          AND is_friend(user_account_id1, p_user_id2) = 1 )
+        OR ( user_account_id1 = p_user_id1
+             AND is_friend(user_account_id, p_user_id2) = 1 );
+
+    RETURN v_counter;
+END;
+
+/
+--------------------------------------------------------
+--  DDL for Function COUNT_SEEN_TIMES
+--------------------------------------------------------
+
+  CREATE OR REPLACE FUNCTION "FB"."COUNT_SEEN_TIMES" (
+    p_post_id  IN  INTEGER,
+    p_user_id  IN  INTEGER
+) RETURN INTEGER IS
+    v_count INTEGER;
+BEGIN
+    SELECT
+        counter
+    INTO v_count
+    FROM
+        seen_post
+    WHERE
+            post_id = p_post_id
+        AND user_account_id = p_user_id;
+
+    RETURN v_count;
+EXCEPTION
+    WHEN no_data_found THEN
+        RETURN 0;
+END;
+
+/
+--------------------------------------------------------
+--  DDL for Function EVALUATE_POST
+--------------------------------------------------------
+
+  CREATE OR REPLACE FUNCTION "FB"."EVALUATE_POST" (
+    p_post_id    IN  INTEGER,
+    p_sort_type  IN  INTEGER
+) RETURN INTEGER IS
+BEGIN
+    IF ( p_sort_type = 1 ) THEN
+        RETURN evaluate_post_date(p_post_id, 1);
+    END IF;
+    IF ( p_sort_type = 2 ) THEN
+        RETURN evaluate_post_importance(p_post_id);
+    END IF;
+    
+END;
+
+/
+--------------------------------------------------------
+--  DDL for Function EVALUATE_POST_DATE
+--------------------------------------------------------
+
+  CREATE OR REPLACE FUNCTION "FB"."EVALUATE_POST_DATE" (
+    p_post_id           IN INTEGER,
+    p_hour_coefficient  INTEGER
+) RETURN INTEGER IS
+    v_result INTEGER;
+BEGIN
+    SELECT
+        p_hour_coefficient * 24 * ( sysdate() - last_update )
+    INTO v_result
+    FROM
+        post
+    WHERE
+        p_post_id = id;
+
+    RETURN v_result;
+END;
+
+/
+--------------------------------------------------------
+--  DDL for Function EVALUATE_POST_IMPORTANCE
+--------------------------------------------------------
+
+  CREATE OR REPLACE FUNCTION "FB"."EVALUATE_POST_IMPORTANCE" (
+    p_post_id IN INTEGER
+) RETURN INTEGER IS
+    v_result                 INTEGER;
+    v_hour_coefficient       INTEGER := 1;
+    v_comments_coefficient   INTEGER := 1;
+    v_reactions_coefficient  INTEGER := 1;
+BEGIN
+    SELECT
+        v_hour_coefficient * 24 * ( sysdate() - last_update ) + 
+        v_comments_coefficient * comments + 
+        v_reactions_coefficient * reactions
+    INTO v_result
+    FROM
+        post
+    WHERE
+        p_post_id = id;
+
+    RETURN v_result;
+END;
+
+/
+--------------------------------------------------------
+--  DDL for Function GET_BEST
+--------------------------------------------------------
+
+  CREATE OR REPLACE FUNCTION "FB"."GET_BEST" (
+    p_user_id    IN  INTEGER,
+    p_sort_type  IN  INTEGER
+) RETURN INTEGER IS
+    v_post_id           INTEGER := -1;
+    v_minimum_not_seen  INTEGER := -1;
+BEGIN
+    SELECT
+        MIN(count_seen_times(id, p_user_id))
+    INTO v_minimum_not_seen
+    FROM
+        post
+    WHERE
+        possible_post(id, p_user_id) = 1;
+
+    SELECT
+        id
+    INTO v_post_id
+    FROM
+        (
+            SELECT
+                id
+            FROM
+                post
+            WHERE
+                    possible_post(id, p_user_id) = 1
+                AND count_seen_times(id, p_user_id) = v_minimum_not_seen
+            ORDER BY
+                evaluate_post(id, p_sort_type)
+        )
+    WHERE
+        ROWNUM <= 1;
+
+    RETURN v_post_id;
+EXCEPTION
+    WHEN no_data_found THEN
+        RETURN -1;
+END;
+
+/
+--------------------------------------------------------
+--  DDL for Function GET_BEST_BY_USERID
+--------------------------------------------------------
+
+  CREATE OR REPLACE FUNCTION "FB"."GET_BEST_BY_USERID" (
+    p_user_id     IN  INTEGER,
+    p_user_fr_id  IN  INTEGER,
+    p_sort_type   IN  INTEGER
+) RETURN INTEGER IS
+    v_post_id           INTEGER := -1;
+    v_minimum_not_seen  INTEGER := -1;
+BEGIN
+    SELECT
+        MIN(count_seen_times(id, p_user_id))
+    INTO v_minimum_not_seen
+    FROM
+        post
+    WHERE
+            user_account_id = p_user_fr_id
+        AND possible_post(id, p_user_id) = 1;
+
+    SELECT
+        id
+    INTO v_post_id
+    FROM
+        (
+            SELECT
+                id
+            FROM
+                post
+            WHERE
+                    user_account_id = p_user_fr_id
+                AND possible_post(id, p_user_id) = 1
+                AND count_seen_times(id, p_user_id) = v_minimum_not_seen
+            ORDER BY
+                evaluate_post(id, p_sort_type)
+        )
+    WHERE
+        ROWNUM <= 1;
+
+    RETURN v_post_id;
+EXCEPTION
+    WHEN no_data_found THEN
+        RETURN -1;
+END;
+
+/
+--------------------------------------------------------
+--  DDL for Function GET_COMMON_FRIENDS
+--------------------------------------------------------
+
+  CREATE OR REPLACE FUNCTION "FB"."GET_COMMON_FRIENDS" (
+    p_user_id1  INTEGER,
+    p_user_id2  INTEGER
+) RETURN VARCHAR IS
+
+    v_result VARCHAR2(1000);
+    CURSOR c_common1 IS
+    SELECT
+        user_account_id1 AS id
+    FROM
+        friendship
+    WHERE
+        ( user_account_id = p_user_id1
+          AND is_friend(user_account_id1, p_user_id2) = 1 );
+
+    CURSOR c_common2 IS
+    SELECT
+        user_account_id AS id
+    FROM
+        friendship
+    WHERE
+        ( user_account_id1 = p_user_id1
+          AND is_friend(user_account_id, p_user_id2) = 1 );
+
+BEGIN
+    v_result := '';
+    FOR r_id IN c_common1 LOOP
+        v_result := v_result
+                    || r_id.id
+                    || ' ';
+    END LOOP;
+
+    FOR r_id IN c_common2 LOOP
+        v_result := v_result
+                    || r_id.id
+                    || ' ';
+    END LOOP;
+
+    RETURN v_result;
+END;
+
+/
+--------------------------------------------------------
+--  DDL for Function GET_SUGGESTED_FRIENDS
+--------------------------------------------------------
+
+  CREATE OR REPLACE FUNCTION "FB"."GET_SUGGESTED_FRIENDS" (
+    p_user_id  INTEGER,
+    p_start    INTEGER,
+    p_counter  INTEGER
+) RETURN VARCHAR IS
+
+    v_result VARCHAR2(1000);
+    CURSOR c_sugg IS
+    SELECT
+        id
+    FROM
+        (
+            SELECT
+                id,
+                ROWNUM
+            FROM
+                user_account
+            WHERE
+                    is_friend(id, p_user_id) = 0
+                AND id != p_user_id
+                AND id NOT IN (
+                    SELECT
+                        rf.user_account_id
+                    FROM
+                        request_friendship rf
+                    WHERE
+                        rf.user_account_id1 = p_user_id
+                )
+                AND id NOT IN (
+                    SELECT
+                        rf.user_account_id1
+                    FROM
+                        request_friendship rf
+                    WHERE
+                        rf.user_account_id = p_user_id
+                )
+            ORDER BY
+                count_common_friends(id, p_user_id)
+        )
+    WHERE
+            ROWNUM >= p_start
+        AND ROWNUM <= p_start + p_counter;
+
+BEGIN
+    v_result := '';
+    FOR r_id IN c_sugg LOOP
+        v_result := v_result
+                    || r_id.id
+                    || ' ';
+    END LOOP;
+
+    RETURN v_result;
+END;
+
+/
+--------------------------------------------------------
+--  DDL for Function GET_USER_FRIENDS
+--------------------------------------------------------
+
+  CREATE OR REPLACE FUNCTION "FB"."GET_USER_FRIENDS" (
+    p_user_id INTEGER
+) RETURN VARCHAR IS
+
+    v_result VARCHAR2(1000);
+    CURSOR c_friends1 IS
+    SELECT
+        user_account_id1 AS id
+    FROM
+        friendship
+    WHERE
+        user_account_id = p_user_id;
+
+    CURSOR c_friends2 IS
+    SELECT
+        user_account_id AS id
+    FROM
+        friendship
+    WHERE
+        user_account_id1 = p_user_id;
+
+BEGIN
+    v_result := '';
+    FOR r_id IN c_friends1 LOOP
+        v_result := v_result
+                    || r_id.id
+                    || ' ';
+    END LOOP;
+
+    FOR r_id IN c_friends2 LOOP
+        v_result := v_result
+                    || r_id.id
+                    || ' ';
+    END LOOP;
+
+    RETURN v_result;
+END;
+
+/
+--------------------------------------------------------
+--  DDL for Function IS_FRIEND
+--------------------------------------------------------
+
+  CREATE OR REPLACE FUNCTION "FB"."IS_FRIEND" (
+    p_user_id1  IN  INTEGER,
+    p_user_id2  IN  INTEGER
+) RETURN INTEGER IS
+    v_count INTEGER := 0;
+BEGIN
+    SELECT
+        COUNT(*)
+    INTO v_count
+    FROM
+        friendship
+    WHERE
+        ( p_user_id1 = friendship.user_account_id
+          AND p_user_id2 = friendship.user_account_id1 )
+        OR ( p_user_id1 = friendship.user_account_id1
+             AND p_user_id2 = friendship.user_account_id );
+
+    IF ( v_count = 0 ) THEN
+        RETURN 0;
+    ELSE
+        RETURN 1;
+    END IF;
+END;
+
+/
+--------------------------------------------------------
+--  DDL for Function POSSIBLE_POST
+--------------------------------------------------------
+
+  CREATE OR REPLACE FUNCTION "FB"."POSSIBLE_POST" (
+    p_post_id  IN  INTEGER,
+    p_user_id  IN  INTEGER
+) RETURN INTEGER IS
+    v_user_account_id INTEGER;
+BEGIN
+    SELECT
+        user_account_id
+    INTO v_user_account_id
+    FROM
+        post
+    WHERE
+        post.id = p_post_id;
+
+    IF ( is_friend(v_user_account_id, p_user_id) = 1 OR p_user_id = v_user_account_id ) THEN
+        RETURN 1;
+    ELSE
+        RETURN 0;
+    END IF;
+
+END;
+
+/
+--------------------------------------------------------
+--  Constraints for Table CHAT
+--------------------------------------------------------
+
+  ALTER TABLE "FB"."CHAT" ADD CONSTRAINT "CHAT_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "FB"."CHAT" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CHAT_LINE
+--------------------------------------------------------
+
+  ALTER TABLE "FB"."CHAT_LINE" ADD CONSTRAINT "CHAT_LINE_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "FB"."CHAT_LINE" ADD CHECK ( send_from IN ( 1, 2 ) ) ENABLE;
+  ALTER TABLE "FB"."CHAT_LINE" MODIFY ("CHAT_ID" NOT NULL ENABLE);
+  ALTER TABLE "FB"."CHAT_LINE" MODIFY ("SEND_FROM" NOT NULL ENABLE);
+  ALTER TABLE "FB"."CHAT_LINE" MODIFY ("SEND_DATE" NOT NULL ENABLE);
+  ALTER TABLE "FB"."CHAT_LINE" MODIFY ("MESSAGE" NOT NULL ENABLE);
+  ALTER TABLE "FB"."CHAT_LINE" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "FB"."CHAT_LINE" ADD CHECK ( send_from IN ( 1, 2 ) ) ENABLE;
+--------------------------------------------------------
+--  Constraints for Table COMMENTS
+--------------------------------------------------------
+
+  ALTER TABLE "FB"."COMMENTS" ADD CONSTRAINT "COMMENTS_CK_2" CHECK ( post_id is not null or comments_id is not null ) ENABLE;
+  ALTER TABLE "FB"."COMMENTS" ADD CONSTRAINT "COMMENTS_CK_1" CHECK ( post_id is null or comments_id is null ) ENABLE;
+  ALTER TABLE "FB"."COMMENTS" ADD CONSTRAINT "COMMENTS_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "FB"."COMMENTS" MODIFY ("USER_ACCOUNT_ID" NOT NULL ENABLE);
+  ALTER TABLE "FB"."COMMENTS" MODIFY ("TEXT" NOT NULL ENABLE);
+  ALTER TABLE "FB"."COMMENTS" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table EVENT
+--------------------------------------------------------
+
+  ALTER TABLE "FB"."EVENT" ADD CONSTRAINT "EVENT_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "FB"."EVENT" ADD CONSTRAINT "EVENT_CK_1" CHECK ( announcement_date <= event_date ) ENABLE;
+  ALTER TABLE "FB"."EVENT" MODIFY ("INTERESTED" NOT NULL ENABLE);
+  ALTER TABLE "FB"."EVENT" MODIFY ("EVENT_DATE" NOT NULL ENABLE);
+  ALTER TABLE "FB"."EVENT" MODIFY ("TEXT" NOT NULL ENABLE);
+  ALTER TABLE "FB"."EVENT" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table FRIENDSHIP
+--------------------------------------------------------
+
+  ALTER TABLE "FB"."FRIENDSHIP" ADD CONSTRAINT "FRIENDSHIP_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "FB"."FRIENDSHIP" ADD CONSTRAINT "FRIENDSHIP_CK_1" CHECK ( user_account_id != user_account_id1 ) ENABLE;
+  ALTER TABLE "FB"."FRIENDSHIP" MODIFY ("USER_ACCOUNT_ID1" NOT NULL ENABLE);
+  ALTER TABLE "FB"."FRIENDSHIP" MODIFY ("USER_ACCOUNT_ID" NOT NULL ENABLE);
+  ALTER TABLE "FB"."FRIENDSHIP" MODIFY ("FRIENDSHIP_DATE" NOT NULL ENABLE);
+  ALTER TABLE "FB"."FRIENDSHIP" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table JOINED_EVENT
+--------------------------------------------------------
+
+  ALTER TABLE "FB"."JOINED_EVENT" ADD CONSTRAINT "JOINED_EVENT_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "FB"."JOINED_EVENT" MODIFY ("USER_ACCOUNT_ID" NOT NULL ENABLE);
+  ALTER TABLE "FB"."JOINED_EVENT" MODIFY ("EVENT_ID" NOT NULL ENABLE);
+  ALTER TABLE "FB"."JOINED_EVENT" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "FB"."JOINED_EVENT" ADD CONSTRAINT "JOINED_UNIQUE" UNIQUE ("EVENT_ID", "USER_ACCOUNT_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table NOTIFICATION
+--------------------------------------------------------
+
+  ALTER TABLE "FB"."NOTIFICATION" ADD CONSTRAINT "NOTIFICATION_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "FB"."NOTIFICATION" MODIFY ("USER_ACCOUNT_ID" NOT NULL ENABLE);
+  ALTER TABLE "FB"."NOTIFICATION" MODIFY ("TEXT" NOT NULL ENABLE);
+  ALTER TABLE "FB"."NOTIFICATION" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table POST
+--------------------------------------------------------
+
+  ALTER TABLE "FB"."POST" ADD CONSTRAINT "POST_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "FB"."POST" ADD CONSTRAINT "POST_CK_1" CHECK ( text IS NOT NULL
+                                     OR photo_url IS NOT NULL ) ENABLE;
+  ALTER TABLE "FB"."POST" MODIFY ("USER_ACCOUNT_ID" NOT NULL ENABLE);
+  ALTER TABLE "FB"."POST" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table REACTIONS
+--------------------------------------------------------
+
+  ALTER TABLE "FB"."REACTIONS" ADD CONSTRAINT "REACTIONS_CK_2" CHECK ( post_id is not null or comments_id is not null ) ENABLE;
+  ALTER TABLE "FB"."REACTIONS" ADD CONSTRAINT "REACTIONS_CK_1" CHECK ( post_id is null or comments_id is null ) ENABLE;
+  ALTER TABLE "FB"."REACTIONS" ADD CONSTRAINT "REACT_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "FB"."REACTIONS" MODIFY ("USER_ACCOUNT_ID" NOT NULL ENABLE);
+  ALTER TABLE "FB"."REACTIONS" MODIFY ("REACTIONS_TYPE_ID" NOT NULL ENABLE);
+  ALTER TABLE "FB"."REACTIONS" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table REACTIONS_TYPE
+--------------------------------------------------------
+
+  ALTER TABLE "FB"."REACTIONS_TYPE" ADD CONSTRAINT "REACTIONS_TYPE__UN" UNIQUE ("TITLE")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "FB"."REACTIONS_TYPE" ADD CONSTRAINT "REACTIONS_TYPE_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "FB"."REACTIONS_TYPE" MODIFY ("TITLE" NOT NULL ENABLE);
+  ALTER TABLE "FB"."REACTIONS_TYPE" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table REQUEST_FRIENDSHIP
+--------------------------------------------------------
+
+  ALTER TABLE "FB"."REQUEST_FRIENDSHIP" ADD CONSTRAINT "REQUEST_FRIENDSHIP_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "FB"."REQUEST_FRIENDSHIP" ADD CONSTRAINT "REQUEST_FRIENDSHIP_CK_1" CHECK ( user_account_id != user_account_id1 ) ENABLE;
+  ALTER TABLE "FB"."REQUEST_FRIENDSHIP" MODIFY ("USER_ACCOUNT_ID1" NOT NULL ENABLE);
+  ALTER TABLE "FB"."REQUEST_FRIENDSHIP" MODIFY ("USER_ACCOUNT_ID" NOT NULL ENABLE);
+  ALTER TABLE "FB"."REQUEST_FRIENDSHIP" MODIFY ("SEND_DATE" NOT NULL ENABLE);
+  ALTER TABLE "FB"."REQUEST_FRIENDSHIP" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "FB"."REQUEST_FRIENDSHIP" ADD CONSTRAINT "REQUEST_FRIENDSHIP_UNIQUE" UNIQUE ("USER_ACCOUNT_ID", "USER_ACCOUNT_ID1")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table SEEN_POST
+--------------------------------------------------------
+
+  ALTER TABLE "FB"."SEEN_POST" ADD CONSTRAINT "SEEN_POST_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "FB"."SEEN_POST" MODIFY ("POST_ID" NOT NULL ENABLE);
+  ALTER TABLE "FB"."SEEN_POST" MODIFY ("USER_ACCOUNT_ID" NOT NULL ENABLE);
+  ALTER TABLE "FB"."SEEN_POST" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table USER_ACCOUNT
+--------------------------------------------------------
+
+  ALTER TABLE "FB"."USER_ACCOUNT" ADD CONSTRAINT "USER__UN" UNIQUE ("EMAIL")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "FB"."USER_ACCOUNT" ADD CONSTRAINT "USER_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "FB"."USER_ACCOUNT" MODIFY ("LAST_NAME" NOT NULL ENABLE);
+  ALTER TABLE "FB"."USER_ACCOUNT" MODIFY ("FIRST_NAME" NOT NULL ENABLE);
+  ALTER TABLE "FB"."USER_ACCOUNT" MODIFY ("PASSWORD" NOT NULL ENABLE);
+  ALTER TABLE "FB"."USER_ACCOUNT" MODIFY ("EMAIL" NOT NULL ENABLE);
+  ALTER TABLE "FB"."USER_ACCOUNT" MODIFY ("USERNAME" NOT NULL ENABLE);
+  ALTER TABLE "FB"."USER_ACCOUNT" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Ref Constraints for Table CHAT
+--------------------------------------------------------
+
+  ALTER TABLE "FB"."CHAT" ADD CONSTRAINT "CHAT_USER_ACCOUNT_FK" FOREIGN KEY ("USER_ACCOUNT_ID")
+	  REFERENCES "FB"."USER_ACCOUNT" ("ID") ON DELETE SET NULL ENABLE;
+  ALTER TABLE "FB"."CHAT" ADD CONSTRAINT "CHAT_USER_ACCOUNT_FKV2" FOREIGN KEY ("USER_ACCOUNT_ID1")
+	  REFERENCES "FB"."USER_ACCOUNT" ("ID") ON DELETE SET NULL ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table CHAT_LINE
+--------------------------------------------------------
+
+  ALTER TABLE "FB"."CHAT_LINE" ADD CONSTRAINT "CHAT_LINE_CHAT_FK" FOREIGN KEY ("CHAT_ID")
+	  REFERENCES "FB"."CHAT" ("ID") ON DELETE CASCADE ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table COMMENTS
+--------------------------------------------------------
+
+  ALTER TABLE "FB"."COMMENTS" ADD CONSTRAINT "COMMENTS_COMMENTS_FK" FOREIGN KEY ("COMMENTS_ID")
+	  REFERENCES "FB"."COMMENTS" ("ID") ON DELETE CASCADE ENABLE;
+  ALTER TABLE "FB"."COMMENTS" ADD CONSTRAINT "COMMENTS_POST_FK" FOREIGN KEY ("POST_ID")
+	  REFERENCES "FB"."POST" ("ID") ON DELETE CASCADE ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table EVENT
+--------------------------------------------------------
+
+  ALTER TABLE "FB"."EVENT" ADD CONSTRAINT "EVENT_USER_ACCOUNT_FK" FOREIGN KEY ("USER_ACCOUNT_ID")
+	  REFERENCES "FB"."USER_ACCOUNT" ("ID") ON DELETE SET NULL ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table FRIENDSHIP
+--------------------------------------------------------
+
+  ALTER TABLE "FB"."FRIENDSHIP" ADD CONSTRAINT "FRIENDSHIP_USER_ACCOUNT_FK" FOREIGN KEY ("USER_ACCOUNT_ID")
+	  REFERENCES "FB"."USER_ACCOUNT" ("ID") ON DELETE CASCADE ENABLE;
+  ALTER TABLE "FB"."FRIENDSHIP" ADD CONSTRAINT "FRIENDSHIP_USER_ACCOUNT_FKV2" FOREIGN KEY ("USER_ACCOUNT_ID1")
+	  REFERENCES "FB"."USER_ACCOUNT" ("ID") ON DELETE CASCADE ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table JOINED_EVENT
+--------------------------------------------------------
+
+  ALTER TABLE "FB"."JOINED_EVENT" ADD CONSTRAINT "JOINED_EVENT_EVENT_FK" FOREIGN KEY ("EVENT_ID")
+	  REFERENCES "FB"."EVENT" ("ID") ON DELETE CASCADE ENABLE;
+  ALTER TABLE "FB"."JOINED_EVENT" ADD CONSTRAINT "JOINED_EVENT_USER_ACCOUNT_FK" FOREIGN KEY ("USER_ACCOUNT_ID")
+	  REFERENCES "FB"."USER_ACCOUNT" ("ID") ON DELETE CASCADE ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table NOTIFICATION
+--------------------------------------------------------
+
+  ALTER TABLE "FB"."NOTIFICATION" ADD CONSTRAINT "NOTIFICATION_USER_ACCOUNT_FK" FOREIGN KEY ("USER_ACCOUNT_ID")
+	  REFERENCES "FB"."USER_ACCOUNT" ("ID") ON DELETE CASCADE ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table POST
+--------------------------------------------------------
+
+  ALTER TABLE "FB"."POST" ADD CONSTRAINT "POST_USER_ACCOUNT_FK" FOREIGN KEY ("USER_ACCOUNT_ID")
+	  REFERENCES "FB"."USER_ACCOUNT" ("ID") ON DELETE CASCADE ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table REACTIONS
+--------------------------------------------------------
+
+  ALTER TABLE "FB"."REACTIONS" ADD CONSTRAINT "REACTIONS_COMMENTS_FK" FOREIGN KEY ("COMMENTS_ID")
+	  REFERENCES "FB"."COMMENTS" ("ID") ON DELETE CASCADE ENABLE;
+  ALTER TABLE "FB"."REACTIONS" ADD CONSTRAINT "REACTIONS_POST_FK" FOREIGN KEY ("POST_ID")
+	  REFERENCES "FB"."POST" ("ID") ON DELETE CASCADE ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table REQUEST_FRIENDSHIP
+--------------------------------------------------------
+
+  ALTER TABLE "FB"."REQUEST_FRIENDSHIP" ADD CONSTRAINT "REQFRIEND_USERACC_FK" FOREIGN KEY ("USER_ACCOUNT_ID")
+	  REFERENCES "FB"."USER_ACCOUNT" ("ID") ON DELETE CASCADE ENABLE;
+  ALTER TABLE "FB"."REQUEST_FRIENDSHIP" ADD CONSTRAINT "REQFRIEND_USERACC_FKV2" FOREIGN KEY ("USER_ACCOUNT_ID1")
+	  REFERENCES "FB"."USER_ACCOUNT" ("ID") ON DELETE CASCADE ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table SEEN_POST
+--------------------------------------------------------
+
+  ALTER TABLE "FB"."SEEN_POST" ADD CONSTRAINT "SEEN_POST_POST_FK" FOREIGN KEY ("POST_ID")
+	  REFERENCES "FB"."POST" ("ID") ON DELETE CASCADE ENABLE;
+  ALTER TABLE "FB"."SEEN_POST" ADD CONSTRAINT "SEEN_POST_USER_ACCOUNT_FK" FOREIGN KEY ("USER_ACCOUNT_ID")
+	  REFERENCES "FB"."USER_ACCOUNT" ("ID") ON DELETE CASCADE ENABLE;

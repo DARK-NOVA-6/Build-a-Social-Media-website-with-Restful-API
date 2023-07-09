@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script defer src="http://localhost:8892/socket.io/socket.io.js"></script>
+    <script defer type="text/javascript" src="./views/script.js"></script>
+</head>
+<body>
+
+<script>
+  user = {};
+  user.full_name = '<%= user.name; %>';
+  user.id = '<%= user.id; %>';
+  user.photo = '<%= user.photo; %>';
+  console.log(user);
+</script>
+user id to send message:
+<input type="text" id="id1">
+<br>
+text of the message:
+<input type="text" id="id2" oninput="typing_event()">
+<br>
+<button onclick="send_message(document.getElementById('id1').value,document.getElementById('id2').value)">send</button>
+<br>
+<br>
+<br>
+<button onclick="console.log(online_friends)">online friends</button>
+<br>
+<br>
+<br>
+<button onclick="console.log(conversations)">conversations list</button>
+message id to read:
+<input type="text" id="id3">
+message sent from:
+<input type="text" id="id4">
+<br>
+<button onclick="read_message(document.getElementById('id3').value,document.getElementById('id4').value)">read</button>
+
+<br>
+<br>
+<br>
+chat id to get older message:
+<input type="text" id="id5">
+<br>
+<button onclick="get_older_message(document.getElementById('id5').value)">get older message</button>
+
+</body>
+
+</html>

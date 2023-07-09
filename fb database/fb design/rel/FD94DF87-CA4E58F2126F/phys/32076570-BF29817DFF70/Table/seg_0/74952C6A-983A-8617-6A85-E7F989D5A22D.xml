@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="chat" directorySegmentName="seg_0" id="74952C6A-983A-8617-6A85-E7F989D5A22D">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:39:04 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="last_date" id="0986FAD9-B06B-E381-38C8-04B3CF8CF03C">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:20:39 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="user_account_id" id="75978FCB-BFDD-EED9-EED4-124B38DF7554">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:54:43 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="user_account_id1" id="AC4778E5-3B35-0E00-2C4C-7013C1BDF823">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:55:05 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="number_unread" id="DB0A1B5C-E3BD-D7C5-F651-413B9FE2D1A8">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:20:39 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<defaultValue>0</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="id" id="F207CBFE-518E-EE59-E332-5069A1D90C80">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:39:04 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="chat_user_account_FK" id="10181BAE-6299-0D63-6F55-AE020146AA7B">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:54:43 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="chat_user_account_FKv2" id="67190E11-FFCF-096A-9886-56E916D237D5">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:55:05 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="chat_PK" id="4ACACE98-392A-B168-8606-8FE57E239629">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:39:04 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

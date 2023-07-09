@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<script>
+  user = {};
+  user.full_name = '<%= user.name %>';
+  user.id = '<%= user.id %>';
+  user.photo = '<%= user.photo %>';
+  console.log(user);
+</script>
+
+<button onclick="get_all_events()">get all events</button>
+<br>
+<br>
+<br>
+event id to get all interested users:
+<input type="text" id="id1p">
+<button onclick="get_interested(document.getElementById('id1p').value)">get interested</button>
+<br>
+<br>
+<br>
+event id to join:
+<input type="text" id="id1">
+<button onclick="join_event(document.getElementById('id1').value)">join event</button>
+<br>
+<br>
+<br>
+event id to undo join :
+<input type="text" id="id1_">
+<button onclick="undo_join_event(document.getElementById('id1_').value)">undo join event</button>
+<br>
+<br>
+<br>
+
+event id to delete:
+<input type="text" id="id2">
+<button onclick="delete_event(document.getElementById('id2').value)">delete event</button>
+<br>
+<br>
+<br>
+
+Create event
+<form method="post" action="http://127.0.0.1:8888/add-event">
+    <label>
+        TEXT:
+        <input name="text" type="text">
+    </label>
+    <label>
+        DATE:
+        <input name="date" type="date">
+    </label>
+    <label>
+        TIME:
+        <input name="time" type="time">
+    </label>
+    <input type="submit">
+</form>
+<br>
+<br>
+<br>
+UPDATE event
+<form method="post" action="http://127.0.0.1:8888/update-event">
+    <label>
+        EVENT ID:
+        <input name="event_id" type="text">
+    </label>
+    <br>
+    <label>
+        TEXT:
+        <input name="text" type="text">
+    </label>
+    <label>
+        DATE:
+        <input name="date" type="date">
+    </label>
+    <label>
+        TIME:
+        <input name="time" type="time">
+    </label>
+    <input type="submit">
+</form>
+<br>
+<br>
+<br>
+
+<script>
+
+  function get_interested(event_id) {
+    $.get('http://127.0.0.1:8888/event-interested/' + event_id, async (data) => {
+      console.log(data);
+    });
+  }
+
+  function get_all_events() {
+    $.get('http://127.0.0.1:8888/event/', async (data) => {
+      console.log(data);
+    });
+  }
+
+  function join_event(event_id) {
+    $.post('http://127.0.0.1:8888/join-event/' + event_id, async (data) => {
+      console.log(data);
+    });
+  }
+
+  function undo_join_event(event_id) {
+    $.post('http://127.0.0.1:8888/undo-join-event/' + event_id, async (data) => {
+      console.log(data);
+    });
+  }
+
+  function delete_event(event_id) {
+    $.ajax({
+      url: 'http://127.0.0.1:8888/event/' + event_id,
+      type: 'DELETE',
+    });
+  }
+
+</script>
+</body>
+</html>

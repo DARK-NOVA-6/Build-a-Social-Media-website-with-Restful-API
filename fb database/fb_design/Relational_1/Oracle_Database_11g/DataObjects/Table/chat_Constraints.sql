@@ -1,0 +1,1 @@
+ALTER TABLE chat ADD CONSTRAINT chat_pk PRIMARY KEY ( id );

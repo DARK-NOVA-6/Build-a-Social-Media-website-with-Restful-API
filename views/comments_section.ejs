@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<script>
+  user = {};
+  user.full_name = '<%= user.name %>';
+  user.id = '<%= user.id %>';
+  user.photo = '<%= user.photo %>';
+  console.log(user);
+</script>
+
+post id to get its comments:
+<input type="text" id="id1">
+<button onclick="get_comments_post(document.getElementById('id1').value)">get comment</button>
+<br>
+<br>
+<br>
+comment id to get its comments:
+<input type="text" id="id2">
+<button onclick="get_comments_comment(document.getElementById('id2').value)">get comment</button>
+<br>
+<br>
+<br>
+post id to make a comment on it:
+<input type="text" id="id3">
+<br>
+text of the new comment:
+<input type="text" id="id4">
+<br>
+<button onclick="add_comment_post(document.getElementById('id3').value,document.getElementById('id4').value)">add comment</button>
+<br>
+<br>
+<br>
+comment id to make a comment on it:
+<input type="text" id="id5">
+<br>
+text of the new comment:
+<input type="text" id="id6">
+<br>
+<button onclick="add_comment_comment(document.getElementById('id5').value,document.getElementById('id6').value)">add comment</button>
+<br>
+<br>
+<br>
+comment id to update:
+<input type="text" id="id51">
+<br>
+new text of the comment:
+<input type="text" id="id61">
+<br>
+<button onclick="update_comment(document.getElementById('id51').value,document.getElementById('id61').value)">update comment</button>
+<br>
+<br>
+<br>
+comment id to delete it:
+<input type="text" id="id7">
+<button onclick="delete_comment(document.getElementById('id7').value)">delete comment</button>
+<br>
+<br>
+<br>
+
+<script>
+
+  function get_comments_post(post_id) {
+    $.get('http://127.0.0.1:8888/comment-post/' + post_id, async (data) => {
+      console.log(data);
+    });
+  }
+
+  function get_comments_comment(comment_id) {
+    $.get('http://127.0.0.1:8888/comment-comment/' + comment_id, async (data) => {
+      console.log(data);
+    });
+  }
+
+  function add_comment_post(post_id, text) {
+    $.post('http://127.0.0.1:8888/comment-post/', {post_id: post_id, text: text}, async (data) => {
+      console.log(data);
+    });
+  }
+
+  function add_comment_comment(comment_id, text) {
+    $.post('http://127.0.0.1:8888/comment-comment/', {comment_id: comment_id, text: text}, async (data) => {
+      console.log(data);
+    });
+  }
+
+  function update_comment(comment_id, text) {
+    $.post('http://127.0.0.1:8888/comment/', {comment_id: comment_id, text: text}, async (data) => {
+      console.log(data);
+    });
+  }
+
+  function delete_comment(comment_id) {
+    $.ajax({
+      url: 'http://127.0.0.1:8888/comment/' + comment_id,
+      type: 'DELETE',
+    });
+  }
+</script>
+</body>
+</html>

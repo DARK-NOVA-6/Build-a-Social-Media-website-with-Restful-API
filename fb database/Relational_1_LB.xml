@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog 
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
+	http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+<changeSet author="MHD" id="_10">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter="/" splitStatements="false"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\Structure_Type\MDSYS.SDO_GEOMETRY.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_20">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter="/" splitStatements="false"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\Structure_Type\XMLTYPE.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_30">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\chat.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_40">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\chat_Constraints.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_50">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\chat_line.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_60">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\chat_line_Constraints.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_70">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\comment_post.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_80">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\comment_post_Constraints.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_90">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\event.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_100">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\event_Constraints.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_110">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\friendship.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_120">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\friendship_Constraints.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_130">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\joined_event.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_140">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\joined_event_Constraints.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_150">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\notification.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_160">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\notification_Constraints.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_170">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\post.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_180">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\post_Constraints.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_190">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\react_comment.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_200">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\react_comment_Constraints.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_210">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\react_post.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_220">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\react_post_Constraints.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_230">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\reactions_type.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_240">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\reactions_type_Constraints.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_250">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\request_friendship.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_260">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\request_friendship_Constraints.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_270">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\seen_post.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_280">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\seen_post_Constraints.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_290">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\user_account.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_300">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\user_account_Constraints.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_310">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\chat_line_chat_FK.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_320">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\chat_user_account_FK.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_330">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\chat_user_account_FKv2.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_340">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\comment_post_post_FK.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_350">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\comment_post_user_account_FK.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_360">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\event_user_account_FK.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_370">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\friendship_user_account_FK.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_380">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\friendship_user_account_FKv2.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_390">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\joined_event_event_FK.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_400">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\joined_event_user_account_FK.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_410">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\notification_user_account_FK.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_420">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\post_user_account_FK.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_430">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\react_comment_comment_post_FK.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_440">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\react_comment_reactions_type_FK.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_450">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\react_comment_user_account_FK.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_460">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\react_post_post_FK.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_470">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\react_post_reactions_type_FK.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_480">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\react_post_user_account_FK.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_490">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\request_friendship_user_account_FK.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_500">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\request_friendship_user_account_FKv2.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_510">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\seen_post_post_FK.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_520">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\seen_post_user_account_FK.sql"/>
+</changeSet>
+<changeSet author="MHD" id="_530">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter="/" splitStatements="false"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\Code\Trigger\Trg_Insert_Delete_Comment.pls"/>
+</changeSet>
+<changeSet author="MHD" id="_540">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter="/" splitStatements="false"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\Code\Trigger\Trg_Insert_Delete_React_Comment.pls"/>
+</changeSet>
+<changeSet author="MHD" id="_550">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter="/" splitStatements="false"  stripComments="false" 
+           path="fb_design\Relational_1\Oracle_Database_11g\Code\Trigger\Trg_Insert_Delete_React_Post.pls"/>
+</changeSet>
+</databaseChangeLog>

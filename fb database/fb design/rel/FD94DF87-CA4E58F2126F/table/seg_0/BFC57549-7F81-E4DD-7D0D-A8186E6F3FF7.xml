@@ -1,0 +1,120 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BFC57549-7F81-E4DD-7D0D-A8186E6F3FF7" name="comment_post">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:14:32 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="BAE13230-21AE-2DF8-937C-6D96133A847A">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:27:38 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="text" id="27A0517B-2187-1A00-6E5A-C488FA3872DD">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:47:17 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="comment_date" id="16E73298-4094-3171-DBCD-C9534F0CF622">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:47:17 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<defaultValue>sysdate</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="reactions" id="6E8477E2-F00A-9466-F08A-7922A971CEB5">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:58:59 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="post_id" id="63C8DA40-2CE8-9B8F-7064-D8DA6285EB05">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:50:37 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8A57AAA6-8329-1CFA-B746-989CFCD5BDBB" referredColumn="FCBF6131-5BEB-96F7-3C63-654F591E7EF0"/>
+</associations>
+</Column>
+<Column name="user_account_id" id="58BB88D5-1F43-0D5E-E5C9-922599E5E9B5">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 02:00:59 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C2265E92-3BBF-3105-4930-3E641F1D7744" referredColumn="AE03C7BE-BBE3-A45F-2989-ACBDAEABC251"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5A909203-C307-AF22-B543-FFEE5F7346E0" name="comment_PK">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:27:38 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BAE13230-21AE-2DF8-937C-6D96133A847A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1B848741-84EC-3455-24ED-7D8C90C1CE4B" name="comment_post_post_FK">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:50:37 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="63C8DA40-2CE8-9B8F-7064-D8DA6285EB05"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E3B0BE62-96D3-D6BE-EE49-31CDDA52DC0D" name="comment_post_user_account_FK">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 02:00:59 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="58BB88D5-1F43-0D5E-E5C9-922599E5E9B5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

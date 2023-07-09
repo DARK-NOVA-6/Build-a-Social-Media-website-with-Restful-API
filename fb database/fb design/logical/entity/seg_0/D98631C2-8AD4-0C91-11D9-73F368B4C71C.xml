@@ -1,0 +1,48 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D98631C2-8AD4-0C91-11D9-73F368B4C71C" name="seen post">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:36:37 UTC</createdTime>
+<generatorID>65284F3C-0025-DF5F-8B5F-1CE4D97C141B</generatorID>
+<ownerDesignName>fb design</ownerDesignName>
+<engineerTo>
+<item key="FD94DF87-8AC1-ADCD-3F32-CA4E58F2126F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="E25503A5-0741-4187-9D59-AD4E1CE35480">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:36:37 UTC</createdTime>
+<generatorID>C2D43EA9-A266-C2F3-9AFD-404ACED6B273</generatorID>
+<ownerDesignName>fb design</ownerDesignName>
+<engineerTo>
+<item key="FD94DF87-8AC1-ADCD-3F32-CA4E58F2126F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1E39BEFB-CAE6-6C7E-8AEB-904ACAE26C33" name="seen post PK">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:36:37 UTC</createdTime>
+<generatorID>A378D65B-86A5-37B9-7F4C-187C0E8C4FE5</generatorID>
+<ownerDesignName>fb design</ownerDesignName>
+<engineerTo>
+<item key="FD94DF87-8AC1-ADCD-3F32-CA4E58F2126F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E25503A5-0741-4187-9D59-AD4E1CE35480</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<script>
+  user = {};
+  user.full_name = '<%= user.name %>';
+  user.id = '<%= user.id %>';
+  user.photo = '<%= user.photo %>';
+  console.log(user);
+</script>
+<script>
+  var page_number = 0;
+</script>
+<button onclick="get_suggested_users()">get users you may know</button>
+<br>
+<br>
+<br>
+<button onclick="get_sent_requests()">get friendship sent requests</button>
+<br>
+<br>
+<br>
+<button onclick="get_received_requests()">get friendship received requests</button>
+<br>
+<br>
+<br>
+<button onclick="get_friends()">get your friends</button>
+<br>
+<br>
+<br>
+user id to get commons friends:
+<input type="text" id="id">
+<button onclick="get_common_friends(document.getElementById('id').value)">get commons friends</button>
+<br>
+<br>
+<br>
+user id to send a friendship request:
+<input type="text" id="id1">
+<button onclick="send_friendship_request(document.getElementById('id1').value)">send request</button>
+<br>
+<br>
+<br>
+user id to accept a friendship request:
+<input type="text" id="id2">
+<button onclick="accept_friendship_request(document.getElementById('id2').value)">accept request</button>
+<br>
+<br>
+<br>
+user id to deny/un-send a friendship request:
+<input type="text" id="id22">
+<button onclick="deny_friendship_request(document.getElementById('id22').value)">deny/un-send request</button>
+<br>
+<br>
+<br>
+user id to delete friendship:
+<input type="text" id="id3">
+<button onclick="delete_friendship(document.getElementById('id3').value)">delete friend</button>
+<br>
+<br>
+<br>
+
+<script>
+
+  function accept_friendship_request(user_id) {
+    $.post('http://127.0.0.1:8888/friendship/' + user_id, async (data) => {
+      console.log(data);
+    });
+  }
+
+  function get_friends() {
+    $.get('http://127.0.0.1:8888/friendship/', async (data) => {
+      console.log(data);
+    });
+  }
+
+  function get_common_friends(user_id) {
+    $.get('http://127.0.0.1:8888/friendship-common/' + user_id, async (data) => {
+      console.log(data);
+    });
+  }
+
+  function get_suggested_users() {
+    console.log('trying.');
+    page_number ++ ;
+    $.get('http://127.0.0.1:8888/friendship-sug/' + page_number, async (data) => {
+      console.log(data);
+    });
+  }
+
+  function deny_friendship_request(user_id) {
+    $.ajax({
+      url: 'http://127.0.0.1:8888/friendship-request/' + user_id,
+      type: 'DELETE',
+    });
+  }
+
+  function send_friendship_request(user_id) {
+    $.post('http://127.0.0.1:8888/friendship-request/' + user_id, async (data) => {
+      console.log(data);
+    });
+  }
+
+  function get_sent_requests() {
+    $.get('http://127.0.0.1:8888/friendship-request-sent/', async (data) => {
+      console.log(data);
+    });
+  }
+
+  function get_received_requests() {
+    $.get('http://127.0.0.1:8888/friendship-request-receive/', async (data) => {
+      console.log(data);
+    });
+  }
+
+  function delete_friendship(user_id) {
+    $.ajax({
+      url: 'http://127.0.0.1:8888/friendship/' + user_id,
+      type: 'DELETE',
+    });
+  }
+
+</script>
+</body>
+</html>

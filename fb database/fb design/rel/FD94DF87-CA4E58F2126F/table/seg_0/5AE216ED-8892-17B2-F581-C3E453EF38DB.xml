@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5AE216ED-8892-17B2-F581-C3E453EF38DB" name="react_comment">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:15:31 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<ordsAlias>table_6</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="A8DA5DF5-A4F6-FC7F-DE4D-114F04142CA1">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:27:20 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="comment_post_id" id="DF7F40CC-92A1-DAC5-9B55-9C2BD0EDEC1C">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:51:05 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F6028F9D-A0D5-6970-0864-F71D0990AD69" referredColumn="BAE13230-21AE-2DF8-937C-6D96133A847A"/>
+</associations>
+</Column>
+<Column name="reactions_type_id" id="294BDB99-2D53-CE82-D26D-19F3CC3147FC">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:51:44 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DE6C1871-664C-FD44-D7CC-5D81E4B37E91" referredColumn="FFA09B81-654B-325B-70B0-FFC722241C22"/>
+</associations>
+</Column>
+<Column name="user_account_id" id="51CC8336-47D6-78C4-BA57-79756C1CFE5C">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 03:08:00 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="79A59799-8506-19DE-DF28-763329E2D47F" referredColumn="AE03C7BE-BBE3-A45F-2989-ACBDAEABC251"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="20CF73FC-C99F-E64D-1580-D07AD450B2D3" name="react_comment_PK">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:27:20 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A8DA5DF5-A4F6-FC7F-DE4D-114F04142CA1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2ABDD689-F6E5-BD2F-B54C-402BF30138B2" name="react_comment_comment_post_FK">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:51:05 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DF7F40CC-92A1-DAC5-9B55-9C2BD0EDEC1C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7F2948A4-752D-739E-15FC-F2237A0E8DEC" name="react_comment_reactions_type_FK">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:51:44 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="294BDB99-2D53-CE82-D26D-19F3CC3147FC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="09969032-9FF4-CF70-9CFE-8D2DB7734635" name="react_comment_user_account_FK">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 03:08:00 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="51CC8336-47D6-78C4-BA57-79756C1CFE5C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

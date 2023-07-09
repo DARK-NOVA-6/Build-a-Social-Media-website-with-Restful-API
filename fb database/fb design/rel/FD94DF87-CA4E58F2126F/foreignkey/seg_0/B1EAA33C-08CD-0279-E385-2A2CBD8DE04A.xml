@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="B1EAA33C-08CD-0279-E385-2A2CBD8DE04A" containerWithKeyObject="A1E98309-14F2-3DC8-6744-40F0F71B4A76" localFKIndex="1FB449BF-7D9A-E804-E86D-872D409CFFAE" name="request_friendship_user_account_FKv2">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:53:23 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<referredTableLongName>user_account</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>45051A64-57C5-85E2-4B47-FB69E889B0E1</referredTableID>
+<keyObject>6AC3EA71-C66B-6656-C326-67170A3FA4E9</keyObject>
+<referredKeyID>6AC3EA71-C66B-6656-C326-67170A3FA4E9</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

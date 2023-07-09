@@ -1,0 +1,125 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="45051A64-57C5-85E2-4B47-FB69E889B0E1" name="user_account">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:16:40 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<ordsAlias>table_9</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="AE03C7BE-BBE3-A45F-2989-ACBDAEABC251">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:26:45 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="username" id="A592B7F9-43E3-9056-51AA-FE0433FEF04E">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:09:05 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="05AF0625-0A3D-87DD-FE9D-177455AD0543">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:09:05 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="password" id="B7607805-818F-6FCE-8798-B1B71DE054DB">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:10:03 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="first_name" id="4AA18E4A-D480-F658-6B96-D737BD118D44">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:10:03 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>65</dataTypeSize>
+<ownDataTypeParameters>65,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="last_name" id="5CE7763E-8CEA-DF80-3A63-977317383FCB">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:10:03 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>65</dataTypeSize>
+<ownDataTypeParameters>65,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="photo_url" id="71EC6BAD-3D62-DC30-B6FB-3DEC670D94E7">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:10:03 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="birthdate" id="E003134A-FB87-7CA6-694D-713D0DA5F0BA">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:11:01 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6AC3EA71-C66B-6656-C326-67170A3FA4E9" name="user_PK">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:26:45 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AE03C7BE-BBE3-A45F-2989-ACBDAEABC251"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E7E0EF3A-914F-F1B7-4694-9AEE27C21A1E" name="user__UN">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:09:05 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="05AF0625-0A3D-87DD-FE9D-177455AD0543"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

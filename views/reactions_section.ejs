@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<script>
+  user = {};
+  user.full_name = '<%= user.name %>';
+  user.id = '<%= user.id %>';
+  user.photo = '<%= user.photo %>';
+  console.log(user);
+</script>
+
+post id to react:
+<input type="text" id="id11">
+<select id="react_id" size="3">
+    <option value="like">like</option>
+    <option value="funny">funny</option>
+    <option value="angry">angry</option>
+</select>
+<button onclick="make_post_react(document.getElementById('id11').value,document.getElementById('react_id').value)">mark react</button>
+<br>
+<br>
+<br>
+post id to delete react:
+<input type="text" id="id112">
+<button onclick="delete_post_react(document.getElementById('id112').value)">delete react</button>
+<br>
+<br>
+<br>
+post id to get full react:
+<input type="text" id="id112_">
+<button onclick="get_full_post_react(document.getElementById('id112_').value)">get react</button>
+<br>
+<br>
+<br>
+comment id to react:
+<input type="text" id="id1122">
+<select id="react_id2" size="3">
+    <option value="like">like</option>
+    <option value="funny">funny</option>
+    <option value="angry">angry</option>
+</select>
+<button onclick="make_comment_react(document.getElementById('id1122').value,document.getElementById('react_id2').value)">mark react</button>
+<br>
+<br>
+<br>
+comment id to delete react:
+<input type="text" id="id11122">
+<button onclick="delete_comment_react(document.getElementById('id11122').value)">delete react</button>
+<br>
+<br>
+<br>
+comment id to get full reactions:
+<input type="text" id="id11122_">
+<button onclick="get_full_comment_react(document.getElementById('id11122_').value)">get react</button>
+<br>
+<br>
+<br>
+
+<script>
+
+  function get_full_post_react(post_id) {
+    $.get('http://127.0.0.1:8888/react-post/' + post_id, async (data) => {
+      console.log(data);
+    });
+  }
+
+  function delete_post_react(post_id) {
+    $.ajax({
+      url: 'http://127.0.0.1:8888/react-post/' + post_id,
+      type: 'DELETE',
+    });
+  }
+
+  function make_post_react(post_id, react) {
+    $.post('http://127.0.0.1:8888/react-post/' + post_id, {react_type: react}, async (data) => {
+      console.log(data);
+    });
+  }
+
+  function make_comment_react(comment_id, react) {
+    $.post('http://127.0.0.1:8888/react-comment/' + comment_id, {react_type: react}, async (data) => {
+      console.log(data);
+    });
+  }
+
+  function delete_comment_react(comment_id) {
+    $.ajax({
+      url: 'http://127.0.0.1:8888/react-comment/' + comment_id,
+      type: 'DELETE',
+    });
+  }
+
+  function get_full_comment_react(comment_id) {
+    $.get('http://127.0.0.1:8888/react-comment/' + comment_id, async (data) => {
+      console.log(data);
+    });
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="fb design" id="8B87A96F-5A25-1817-65B6-59FDE16E2B89" version="3.5">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:12:27 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>8B87A96F-5A25-1817-65B6-59FDE16E2B89</designId>
+</OSDM_Design>

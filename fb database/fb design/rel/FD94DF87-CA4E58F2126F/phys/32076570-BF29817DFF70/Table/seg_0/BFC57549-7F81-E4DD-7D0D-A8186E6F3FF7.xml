@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="comment_post" directorySegmentName="seg_0" id="BFC57549-7F81-E4DD-7D0D-A8186E6F3FF7">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:39:04 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="comment_date" id="16E73298-4094-3171-DBCD-C9534F0CF622">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:47:17 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<defaultValue>sysdate</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="text" id="27A0517B-2187-1A00-6E5A-C488FA3872DD">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:47:17 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="user_account_id" id="58BB88D5-1F43-0D5E-E5C9-922599E5E9B5">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 02:00:59 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="post_id" id="63C8DA40-2CE8-9B8F-7064-D8DA6285EB05">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:50:37 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="reactions" id="6E8477E2-F00A-9466-F08A-7922A971CEB5">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:58:59 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<defaultValue>0</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="id" id="BAE13230-21AE-2DF8-937C-6D96133A847A">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:39:04 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="comment_post_post_FK" id="1B848741-84EC-3455-24ED-7D8C90C1CE4B">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:50:37 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="comment_post_user_account_FK" id="E3B0BE62-96D3-D6BE-EE49-31CDDA52DC0D">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 02:00:59 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="comment_PK" id="5A909203-C307-AF22-B543-FFEE5F7346E0">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:39:04 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="friendship" directorySegmentName="seg_0" id="CBF9918C-EC1D-A961-0F5C-726982F3A32F">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:39:04 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="user_account_id" id="1635F2F2-E4B7-D617-6F59-CA2D7457313C">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:53:00 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="friendship_date" id="58C50084-5989-5A88-8F0F-1216043843D4">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:14:42 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<defaultValue>sysdate</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="user_account_id1" id="68835547-9648-212F-111D-92E023B8DB08">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:53:09 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id" id="A5713D8E-CED7-1869-B615-A2F9C6EF0F94">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:39:04 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="friendship_user_account_FK" id="7DEFEF6E-C290-DBA5-F308-121F8F7963F8">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:53:00 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="friendship_user_account_FKv2" id="C36A663F-B90C-EE10-27DF-3FABDCB5E388">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:53:09 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="friendship_PK" id="BFBF7EE9-2762-039C-F7A0-782A44CDBEC9">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:39:04 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.storage.oracle.TableCheckConstraintOracle">
+<TableCheckConstraint name="friendship_CK_1" id="E5AD66E3-AFE6-F91D-D833-AF4ABD63C21C">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:53:54 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+</TableCheckConstraint>
+</tableCheckConstraints>
+</TableProxyOraclev11g>

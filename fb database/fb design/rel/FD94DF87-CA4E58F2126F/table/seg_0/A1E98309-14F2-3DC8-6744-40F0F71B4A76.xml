@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A1E98309-14F2-3DC8-6744-40F0F71B4A76" name="request_friendship">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:17:02 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<ordsAlias>table_11</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="C39D2A54-C270-3711-D288-DBE3FDE7D96A">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:27:09 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="send_date" id="819D7FDB-6B8B-27D3-2118-F95B178E03C5">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:15:07 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<defaultValue>sysdate</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="user_account_id" id="BC8F3244-44D4-B2B4-D22E-58CC49BA6F34">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:53:15 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="84A026F4-8A1B-C549-ECCE-8C40FB06842B" referredColumn="AE03C7BE-BBE3-A45F-2989-ACBDAEABC251"/>
+</associations>
+</Column>
+<Column name="user_account_id1" id="D7DAC463-C263-ACAA-9555-4305794E4F88">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:53:23 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B1EAA33C-08CD-0279-E385-2A2CBD8DE04A" referredColumn="AE03C7BE-BBE3-A45F-2989-ACBDAEABC251"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B12BF033-B097-2926-2F06-BA216040B373" name="request_friendship_PK">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:27:09 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C39D2A54-C270-3711-D288-DBE3FDE7D96A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0379A48C-2D27-63DC-44BE-93FD12233825" name="request_friendship_user_account_FK">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:53:15 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BC8F3244-44D4-B2B4-D22E-58CC49BA6F34"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1FB449BF-7D9A-E804-E86D-872D409CFFAE" name="request_friendship_user_account_FKv2">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:53:23 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D7DAC463-C263-ACAA-9555-4305794E4F88"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="request_friendship_CK_1" directorySegmentName="seg_0" id="7136B7C2-88F3-B560-444A-61427C01D6F6">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 01:54:03 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<rule><![CDATA[user_account_id != user_account_id1]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

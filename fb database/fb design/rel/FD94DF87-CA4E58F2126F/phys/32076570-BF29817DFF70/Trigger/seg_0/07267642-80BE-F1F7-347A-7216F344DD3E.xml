@@ -1,0 +1,24 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="Trg_Insert_Delete_Comment" directorySegmentName="seg_0" id="07267642-80BE-F1F7-347A-7216F344DD3E">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 03:42:06 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<actions>INSERT, DELETE</actions>
+<body><![CDATA[begin
+IF DELETING THEN 
+	update post
+		set comments = comments  - 1 
+		where post.id = :old.post_id ;
+ELSE
+	update post
+		set comments = comments  + 1 
+		where post.id = :new.post_id ;
+END IF;
+
+end;]]></body>
+<triggerTime>BEFORE</triggerTime>
+<ref_NEW_AS>new</ref_NEW_AS>
+<ref_OLD_AS>old</ref_OLD_AS>
+<state>ENABLE</state>
+<table>BFC57549-7F81-E4DD-7D0D-A8186E6F3FF7</table>
+</TriggerOraclev10g>

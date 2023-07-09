@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog 
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:n0="http://www.oracle.com/xml/ns/dbchangelog-ext" 
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
+	http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+<changeSet author="MHD" id="_10">
+ <n0:runOracleScript objectName="MDSYS.SDO_GEOMETRY.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\Structure_Type\MDSYS.SDO_GEOMETRY.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_20">
+ <n0:runOracleScript objectName="XMLTYPE.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\Structure_Type\XMLTYPE.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_30">
+ <n0:runOracleScript objectName="chat.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\chat.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_40">
+ <n0:runOracleScript objectName="chat_Constraints.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\chat_Constraints.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_50">
+ <n0:runOracleScript objectName="chat_line.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\chat_line.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_60">
+ <n0:runOracleScript objectName="chat_line_Constraints.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\chat_line_Constraints.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_70">
+ <n0:runOracleScript objectName="comment_post.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\comment_post.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_80">
+ <n0:runOracleScript objectName="comment_post_Constraints.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\comment_post_Constraints.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_90">
+ <n0:runOracleScript objectName="event.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\event.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_100">
+ <n0:runOracleScript objectName="event_Constraints.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\event_Constraints.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_110">
+ <n0:runOracleScript objectName="friendship.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\friendship.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_120">
+ <n0:runOracleScript objectName="friendship_Constraints.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\friendship_Constraints.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_130">
+ <n0:runOracleScript objectName="joined_event.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\joined_event.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_140">
+ <n0:runOracleScript objectName="joined_event_Constraints.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\joined_event_Constraints.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_150">
+ <n0:runOracleScript objectName="notification.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\notification.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_160">
+ <n0:runOracleScript objectName="notification_Constraints.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\notification_Constraints.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_170">
+ <n0:runOracleScript objectName="post.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\post.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_180">
+ <n0:runOracleScript objectName="post_Constraints.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\post_Constraints.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_190">
+ <n0:runOracleScript objectName="react_comment.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\react_comment.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_200">
+ <n0:runOracleScript objectName="react_comment_Constraints.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\react_comment_Constraints.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_210">
+ <n0:runOracleScript objectName="react_post.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\react_post.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_220">
+ <n0:runOracleScript objectName="react_post_Constraints.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\react_post_Constraints.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_230">
+ <n0:runOracleScript objectName="reactions_type.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\reactions_type.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_240">
+ <n0:runOracleScript objectName="reactions_type_Constraints.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\reactions_type_Constraints.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_250">
+ <n0:runOracleScript objectName="request_friendship.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\request_friendship.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_260">
+ <n0:runOracleScript objectName="request_friendship_Constraints.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\request_friendship_Constraints.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_270">
+ <n0:runOracleScript objectName="seen_post.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\seen_post.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_280">
+ <n0:runOracleScript objectName="seen_post_Constraints.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\seen_post_Constraints.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_290">
+ <n0:runOracleScript objectName="user_account.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\user_account.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_300">
+ <n0:runOracleScript objectName="user_account_Constraints.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\Table\user_account_Constraints.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_310">
+ <n0:runOracleScript objectName="chat_line_chat_FK.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\chat_line_chat_FK.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_320">
+ <n0:runOracleScript objectName="chat_user_account_FK.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\chat_user_account_FK.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_330">
+ <n0:runOracleScript objectName="chat_user_account_FKv2.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\chat_user_account_FKv2.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_340">
+ <n0:runOracleScript objectName="comment_post_post_FK.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\comment_post_post_FK.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_350">
+ <n0:runOracleScript objectName="comment_post_user_account_FK.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\comment_post_user_account_FK.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_360">
+ <n0:runOracleScript objectName="event_user_account_FK.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\event_user_account_FK.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_370">
+ <n0:runOracleScript objectName="friendship_user_account_FK.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\friendship_user_account_FK.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_380">
+ <n0:runOracleScript objectName="friendship_user_account_FKv2.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\friendship_user_account_FKv2.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_390">
+ <n0:runOracleScript objectName="joined_event_event_FK.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\joined_event_event_FK.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_400">
+ <n0:runOracleScript objectName="joined_event_user_account_FK.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\joined_event_user_account_FK.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_410">
+ <n0:runOracleScript objectName="notification_user_account_FK.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\notification_user_account_FK.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_420">
+ <n0:runOracleScript objectName="post_user_account_FK.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\post_user_account_FK.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_430">
+ <n0:runOracleScript objectName="react_comment_comment_post_FK.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\react_comment_comment_post_FK.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_440">
+ <n0:runOracleScript objectName="react_comment_reactions_type_FK.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\react_comment_reactions_type_FK.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_450">
+ <n0:runOracleScript objectName="react_comment_user_account_FK.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\react_comment_user_account_FK.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_460">
+ <n0:runOracleScript objectName="react_post_post_FK.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\react_post_post_FK.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_470">
+ <n0:runOracleScript objectName="react_post_reactions_type_FK.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\react_post_reactions_type_FK.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_480">
+ <n0:runOracleScript objectName="react_post_user_account_FK.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\react_post_user_account_FK.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_490">
+ <n0:runOracleScript objectName="request_friendship_user_account_FK.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\request_friendship_user_account_FK.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_500">
+ <n0:runOracleScript objectName="request_friendship_user_account_FKv2.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\request_friendship_user_account_FKv2.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_510">
+ <n0:runOracleScript objectName="seen_post_post_FK.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\seen_post_post_FK.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_520">
+ <n0:runOracleScript objectName="seen_post_user_account_FK.sql" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\DataObjects\ForeignKey\seen_post_user_account_FK.sql]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_530">
+ <n0:runOracleScript objectName="Trg_Insert_Delete_Comment.pls" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\Code\Trigger\Trg_Insert_Delete_Comment.pls]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_540">
+ <n0:runOracleScript objectName="Trg_Insert_Delete_React_Comment.pls" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\Code\Trigger\Trg_Insert_Delete_React_Comment.pls]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+<changeSet author="MHD" id="_550">
+ <n0:runOracleScript objectName="Trg_Insert_Delete_React_Post.pls" ownerName="OSDDM-MHD" sourceType="FILE" >
+   <n0:source><![CDATA[fb_design\Relational_1\Oracle_Database_11g\Code\Trigger\Trg_Insert_Delete_React_Post.pls]]></n0:source>
+ </n0:runOracleScript>
+</changeSet>
+</databaseChangeLog>

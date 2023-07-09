@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F09ACEC0-646A-36CA-F8FE-AADC87245E1E" name="reactions_type">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:56:52 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<ordsAlias>table_18</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="FFA09B81-654B-325B-70B0-FFC722241C22">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:57:23 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="title" id="BC495CD9-0A2D-14A6-1BAA-B07D7546D479">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:57:58 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CA7B46A9-5EDD-1603-34D2-BFD52FF11B80" name="reactions_type_PK">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:57:23 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FFA09B81-654B-325B-70B0-FFC722241C22"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7A67B53E-17CE-7CA8-32F6-76DFECED42BA" name="reactions_type__UN">
+<createdBy>MHD</createdBy>
+<createdTime>2022-07-09 00:57:58 UTC</createdTime>
+<ownerDesignName>fb design</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BC495CD9-0A2D-14A6-1BAA-B07D7546D479"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
